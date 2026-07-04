@@ -17,7 +17,7 @@ for i, it in enumerate(items, 1):
     ideas_html = "".join("<li>" + html.escape(x) + "</li>" for x in it["ideas"])
     reasons = html.escape("; ".join(it["reasons"]))
     card = "<div class='card'>"
-    card += "<b>" + str(i).zfill(2) + "</b> "d
+    card += "<b>" + str(i).zfill(2) + "</b> "
     card += "<a href='" + html.escape(it["url"]) + "'>" + html.escape(it["name"]) + "</a> "
     card += "<span class='score'>" + str(it["score"]) + "/100</span>"
     card += "<p>" + html.escape(it["description"]) + "</p>"
