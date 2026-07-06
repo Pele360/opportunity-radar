@@ -1,14 +1,14 @@
 {
-  "date": "2026-07-04",
+  "date": "2026-07-06",
   "items": [
     {
       "name": "DietrichGebert/ponytail",
       "score": 90,
-      "stars": 73871,
-      "velocity": 3357.8,
+      "stars": 75485,
+      "velocity": 3145.2,
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "reasons": [
-        "explosive growth (3358 stars/day)",
+        "explosive growth (3145 stars/day)",
         "rich ecosystem angle (agent, skill, claude, llm)",
         "very new (early-mover window)"
       ],
@@ -22,11 +22,11 @@
     {
       "name": "omnigent-ai/omnigent",
       "score": 90,
-      "stars": 6226,
-      "velocity": 270.7,
+      "stars": 6353,
+      "velocity": 264.7,
       "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents \u2014 swap harnesses without rewriting, enforce policies and sandboxing, and c",
       "reasons": [
-        "explosive growth (271 stars/day)",
+        "explosive growth (265 stars/day)",
         "rich ecosystem angle (agent, claude, llm, framework)",
         "very new (early-mover window)"
       ],
@@ -40,11 +40,11 @@
     {
       "name": "cobusgreyling/loop-engineering",
       "score": 90,
-      "stars": 5634,
-      "velocity": 225.4,
+      "stars": 6122,
+      "velocity": 226.7,
       "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, ",
       "reasons": [
-        "explosive growth (225 stars/day)",
+        "explosive growth (227 stars/day)",
         "rich ecosystem angle (agent, mcp, claude, automation)",
         "very new (early-mover window)"
       ],
@@ -58,11 +58,11 @@
     {
       "name": "alchaincyf/huashu-design",
       "score": 90,
-      "stars": 20849,
-      "velocity": 274.3,
+      "stars": 20963,
+      "velocity": 272.2,
       "description": "Huashu Design \u00b7 HTML-native design skill for Claude Code \u00b7 Claude Code \u91cc HTML \u539f\u751f\u7684\u8bbe\u8ba1 skill \u00b7 \u9ad8\u4fdd\u771f\u539f\u578b / \u5e7b\u706f\u7247 / \u52a8\u753b + 20 \u8bbe\u8ba1\u54f2\u5b66 + 5 \u7ef4\u8bc4\u5ba1 + MP4 \u5bfc\u51fa \u00b7 Agent-agnostic",
       "reasons": [
-        "explosive growth (274 stars/day)",
+        "explosive growth (272 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "no official site yet (gap for guides/tools)"
       ],
@@ -76,11 +76,11 @@
     {
       "name": "op7418/guizang-ppt-skill",
       "score": 90,
-      "stars": 20088,
-      "velocity": 279.0,
+      "stars": 20313,
+      "velocity": 278.3,
       "description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
       "reasons": [
-        "explosive growth (279 stars/day)",
+        "explosive growth (278 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "no official site yet (gap for guides/tools)"
       ],
@@ -94,11 +94,11 @@
     {
       "name": "alibaba/open-code-review",
       "score": 90,
-      "stars": 9917,
-      "velocity": 211.0,
+      "stars": 9996,
+      "velocity": 204.0,
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-",
       "reasons": [
-        "explosive growth (211 stars/day)",
+        "explosive growth (204 stars/day)",
         "rich ecosystem angle (agent, skill, llm, assistant)",
         "very new (early-mover window)"
       ],
@@ -111,12 +111,12 @@
     },
     {
       "name": "langchain-ai/openwiki",
-      "score": 80,
-      "stars": 3023,
-      "velocity": 274.8,
+      "score": 85,
+      "stars": 6422,
+      "velocity": 494.0,
       "description": "OpenWiki is a CLI that writes and maintains agent documentation for your codebase.",
       "reasons": [
-        "explosive growth (275 stars/day)",
+        "explosive growth (494 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -131,11 +131,11 @@
     {
       "name": "opensquilla/opensquilla",
       "score": 80,
-      "stars": 5385,
-      "velocity": 91.3,
+      "stars": 5412,
+      "velocity": 90.2,
       "description": "OpenSquilla \u2014 Token-Efficient AI Agent with same budget, higher intelligence density",
       "reasons": [
-        "very fast growth (91 stars/day)",
+        "very fast growth (90 stars/day)",
         "rich ecosystem angle (agent, skill, mcp, llm)",
         "very new (early-mover window)"
       ],
@@ -147,13 +147,32 @@
       "found_via": "AI repos, last 90 days"
     },
     {
+      "name": "elder-plinius/T3MP3ST",
+      "score": 80,
+      "stars": 2168,
+      "velocity": 722.7,
+      "description": "autonomous red teaming platform; multi-agent offensive-security meta-harness",
+      "reasons": [
+        "explosive growth (723 stars/day)",
+        "ecosystem angle (agent)",
+        "very new (early-mover window)",
+        "no official site yet (gap for guides/tools)"
+      ],
+      "ideas": [
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
+      ],
+      "url": "https://github.com/elder-plinius/T3MP3ST",
+      "found_via": "AI repos, last 90 days"
+    },
+    {
       "name": "nexu-io/open-design",
       "score": 80,
-      "stars": 74952,
-      "velocity": 1118.7,
-      "description": "\ud83c\udfa8 The Vibe Design Workspace & the open-source Claude Design alternative. \ud83d\udda5\ufe0f Local-first desktop app. \ud83d\uddbc\ufe0f Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, imag",
+      "stars": 75429,
+      "velocity": 1093.2,
+      "description": "\ud83c\udfa8 The open-source Claude Design alternative. \ud83d\udda5\ufe0f Local-first desktop app. \ud83d\uddbc\ufe0f Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video \u2014 real files, HTM",
       "reasons": [
-        "explosive growth (1119 stars/day)",
+        "explosive growth (1093 stars/day)",
         "rich ecosystem angle (agent, skill, claude, no-code)"
       ],
       "ideas": [
@@ -166,11 +185,11 @@
     {
       "name": "esengine/DeepSeek-Reasonix",
       "score": 80,
-      "stars": 25942,
-      "velocity": 350.6,
+      "stars": 26139,
+      "velocity": 343.9,
       "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability \u2014 leave it running.",
       "reasons": [
-        "explosive growth (351 stars/day)",
+        "explosive growth (344 stars/day)",
         "rich ecosystem angle (agent, llm, framework)"
       ],
       "ideas": [
@@ -183,8 +202,8 @@
     {
       "name": "microsoft/SkillOpt",
       "score": 80,
-      "stars": 10598,
-      "velocity": 185.9,
+      "stars": 11001,
+      "velocity": 186.5,
       "description": "SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.",
       "reasons": [
         "very fast growth (186 stars/day)",
@@ -197,24 +216,6 @@
       ],
       "url": "https://github.com/microsoft/SkillOpt",
       "found_via": "Agent/MCP ecosystem"
-    },
-    {
-      "name": "XiaomiMiMo/MiMo-Code",
-      "score": 75,
-      "stars": 11418,
-      "velocity": 475.8,
-      "description": "MiMo Code: Where Models and Agents Co-Evolve",
-      "reasons": [
-        "explosive growth (476 stars/day)",
-        "ecosystem angle (agent)",
-        "very new (early-mover window)"
-      ],
-      "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
-      ],
-      "url": "https://github.com/XiaomiMiMo/MiMo-Code",
-      "found_via": "New repos, last 30 days"
     }
   ]
 }
