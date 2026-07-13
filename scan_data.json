@@ -1,32 +1,14 @@
 {
-  "date": "2026-07-06",
+  "date": "2026-07-13",
   "items": [
-    {
-      "name": "DietrichGebert/ponytail",
-      "score": 90,
-      "stars": 75485,
-      "velocity": 3145.2,
-      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "reasons": [
-        "explosive growth (3145 stars/day)",
-        "rich ecosystem angle (agent, skill, claude, llm)",
-        "very new (early-mover window)"
-      ],
-      "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
-      ],
-      "url": "https://github.com/DietrichGebert/ponytail",
-      "found_via": "New repos, last 30 days"
-    },
     {
       "name": "omnigent-ai/omnigent",
       "score": 90,
-      "stars": 6353,
-      "velocity": 264.7,
+      "stars": 7177,
+      "velocity": 231.5,
       "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents \u2014 swap harnesses without rewriting, enforce policies and sandboxing, and c",
       "reasons": [
-        "explosive growth (265 stars/day)",
+        "explosive growth (232 stars/day)",
         "rich ecosystem angle (agent, claude, llm, framework)",
         "very new (early-mover window)"
       ],
@@ -35,34 +17,34 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/omnigent-ai/omnigent",
-      "found_via": "New repos, last 30 days"
+      "found_via": "AI repos, last 90 days"
     },
     {
-      "name": "cobusgreyling/loop-engineering",
+      "name": "DietrichGebert/ponytail",
       "score": 90,
-      "stars": 6122,
-      "velocity": 226.7,
-      "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, ",
+      "stars": 81788,
+      "velocity": 2638.3,
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "reasons": [
-        "explosive growth (227 stars/day)",
-        "rich ecosystem angle (agent, mcp, claude, automation)",
+        "explosive growth (2638 stars/day)",
+        "rich ecosystem angle (agent, skill, claude, llm)",
         "very new (early-mover window)"
       ],
       "ideas": [
         "Sell config/skill packs or setup guides on Gumroad",
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
-      "url": "https://github.com/cobusgreyling/loop-engineering",
-      "found_via": "New repos, last 30 days"
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "found_via": "Agent/MCP ecosystem"
     },
     {
       "name": "alchaincyf/huashu-design",
       "score": 90,
-      "stars": 20963,
-      "velocity": 272.2,
+      "stars": 21345,
+      "velocity": 254.1,
       "description": "Huashu Design \u00b7 HTML-native design skill for Claude Code \u00b7 Claude Code \u91cc HTML \u539f\u751f\u7684\u8bbe\u8ba1 skill \u00b7 \u9ad8\u4fdd\u771f\u539f\u578b / \u5e7b\u706f\u7247 / \u52a8\u753b + 20 \u8bbe\u8ba1\u54f2\u5b66 + 5 \u7ef4\u8bc4\u5ba1 + MP4 \u5bfc\u51fa \u00b7 Agent-agnostic",
       "reasons": [
-        "explosive growth (272 stars/day)",
+        "explosive growth (254 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "no official site yet (gap for guides/tools)"
       ],
@@ -76,11 +58,11 @@
     {
       "name": "op7418/guizang-ppt-skill",
       "score": 90,
-      "stars": 20313,
-      "velocity": 278.3,
+      "stars": 21156,
+      "velocity": 264.4,
       "description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
       "reasons": [
-        "explosive growth (278 stars/day)",
+        "explosive growth (264 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "no official site yet (gap for guides/tools)"
       ],
@@ -92,31 +74,13 @@
       "found_via": "Agent/MCP ecosystem"
     },
     {
-      "name": "alibaba/open-code-review",
-      "score": 90,
-      "stars": 9996,
-      "velocity": 204.0,
-      "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-",
-      "reasons": [
-        "explosive growth (204 stars/day)",
-        "rich ecosystem angle (agent, skill, llm, assistant)",
-        "very new (early-mover window)"
-      ],
-      "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
-      ],
-      "url": "https://github.com/alibaba/open-code-review",
-      "found_via": "Agent/MCP ecosystem"
-    },
-    {
       "name": "langchain-ai/openwiki",
       "score": 85,
-      "stars": 6422,
-      "velocity": 494.0,
+      "stars": 10842,
+      "velocity": 542.1,
       "description": "OpenWiki is a CLI that writes and maintains agent documentation for your codebase.",
       "reasons": [
-        "explosive growth (494 stars/day)",
+        "explosive growth (542 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -129,31 +93,13 @@
       "found_via": "New repos, last 30 days"
     },
     {
-      "name": "opensquilla/opensquilla",
-      "score": 80,
-      "stars": 5412,
-      "velocity": 90.2,
-      "description": "OpenSquilla \u2014 Token-Efficient AI Agent with same budget, higher intelligence density",
-      "reasons": [
-        "very fast growth (90 stars/day)",
-        "rich ecosystem angle (agent, skill, mcp, llm)",
-        "very new (early-mover window)"
-      ],
-      "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
-      ],
-      "url": "https://github.com/opensquilla/opensquilla",
-      "found_via": "AI repos, last 90 days"
-    },
-    {
       "name": "elder-plinius/T3MP3ST",
       "score": 80,
-      "stars": 2168,
-      "velocity": 722.7,
+      "stars": 4579,
+      "velocity": 457.9,
       "description": "autonomous red teaming platform; multi-agent offensive-security meta-harness",
       "reasons": [
-        "explosive growth (723 stars/day)",
+        "explosive growth (458 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -163,16 +109,16 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/elder-plinius/T3MP3ST",
-      "found_via": "AI repos, last 90 days"
+      "found_via": "New repos, last 30 days"
     },
     {
       "name": "nexu-io/open-design",
       "score": 80,
-      "stars": 75429,
-      "velocity": 1093.2,
+      "stars": 77711,
+      "velocity": 1022.5,
       "description": "\ud83c\udfa8 The open-source Claude Design alternative. \ud83d\udda5\ufe0f Local-first desktop app. \ud83d\uddbc\ufe0f Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video \u2014 real files, HTM",
       "reasons": [
-        "explosive growth (1093 stars/day)",
+        "explosive growth (1023 stars/day)",
         "rich ecosystem angle (agent, skill, claude, no-code)"
       ],
       "ideas": [
@@ -185,11 +131,11 @@
     {
       "name": "esengine/DeepSeek-Reasonix",
       "score": 80,
-      "stars": 26139,
-      "velocity": 343.9,
+      "stars": 26824,
+      "velocity": 323.2,
       "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability \u2014 leave it running.",
       "reasons": [
-        "explosive growth (344 stars/day)",
+        "explosive growth (323 stars/day)",
         "rich ecosystem angle (agent, llm, framework)"
       ],
       "ideas": [
@@ -200,21 +146,74 @@
       "found_via": "Agent/MCP ecosystem"
     },
     {
-      "name": "microsoft/SkillOpt",
+      "name": "alibaba/open-code-review",
       "score": 80,
-      "stars": 11001,
-      "velocity": 186.5,
-      "description": "SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.",
+      "stars": 10470,
+      "velocity": 187.0,
+      "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-",
       "reasons": [
-        "very fast growth (186 stars/day)",
-        "rich ecosystem angle (agent, skill, llm)",
+        "very fast growth (187 stars/day)",
+        "rich ecosystem angle (agent, skill, llm, assistant)",
         "very new (early-mover window)"
       ],
       "ideas": [
         "Sell config/skill packs or setup guides on Gumroad",
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
-      "url": "https://github.com/microsoft/SkillOpt",
+      "url": "https://github.com/alibaba/open-code-review",
+      "found_via": "Agent/MCP ecosystem"
+    },
+    {
+      "name": "vercel/eve",
+      "score": 75,
+      "stars": 3467,
+      "velocity": 128.4,
+      "description": "The Framework for Building Agents",
+      "reasons": [
+        "very fast growth (128 stars/day)",
+        "rich ecosystem angle (agent, workflow, framework)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
+      ],
+      "url": "https://github.com/vercel/eve",
+      "found_via": "New repos, last 30 days"
+    },
+    {
+      "name": "XiaomiMiMo/MiMo-Code",
+      "score": 75,
+      "stars": 11880,
+      "velocity": 371.2,
+      "description": "MiMo Code: Where Models and Agents Co-Evolve",
+      "reasons": [
+        "explosive growth (371 stars/day)",
+        "ecosystem angle (agent)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
+      ],
+      "url": "https://github.com/XiaomiMiMo/MiMo-Code",
+      "found_via": "AI repos, last 90 days"
+    },
+    {
+      "name": "Yuan1z0825/nature-skills",
+      "score": 75,
+      "stars": 28230,
+      "velocity": 352.9,
+      "description": "\u7b26\u5408nature\u8bba\u6587\u5b66\u672f\u8868\u8fbe\u548c\u79d1\u7814\u7ed8\u56fe\u7684Skill",
+      "reasons": [
+        "explosive growth (353 stars/day)",
+        "ecosystem angle (skill)",
+        "no official site yet (gap for guides/tools)"
+      ],
+      "ideas": [
+        "Create a paid course/guide or complementary tool"
+      ],
+      "url": "https://github.com/Yuan1z0825/nature-skills",
       "found_via": "Agent/MCP ecosystem"
     }
   ]
