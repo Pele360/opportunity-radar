@@ -17,7 +17,59 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/DietrichGebert/ponytail",
-      "found_via": "Agent/MCP ecosystem"
+      "found_via": "Agent/MCP ecosystem",
+      "first_seen": "2026-07-04",
+      "appearances": 5,
+      "history": [
+        {
+          "date": "2026-07-04",
+          "stars": 73871,
+          "score": 90,
+          "velocity": 3357.8
+        },
+        {
+          "date": "2026-07-06",
+          "stars": 75485,
+          "score": 90,
+          "velocity": 3145.2
+        },
+        {
+          "date": "2026-07-13",
+          "stars": 81788,
+          "score": 90,
+          "velocity": 2638.3
+        },
+        {
+          "date": "2026-07-20",
+          "stars": 86358,
+          "score": 90,
+          "velocity": 2272.6
+        },
+        {
+          "date": "2026-07-27",
+          "stars": 90116,
+          "score": 90,
+          "velocity": 2002.6
+        }
+      ],
+      "status": "steady",
+      "star_delta": 3758,
+      "score_delta": 0,
+      "star_delta_pct": 4.4,
+      "star_delta_pct_per_day": 0.62,
+      "compared_to": "2026-07-20",
+      "days_since_compared": 7,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "Holding steady - a slower window, but a safer one."
     },
     {
       "name": "xai-org/grok-build",
@@ -36,7 +88,41 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/xai-org/grok-build",
-      "found_via": "New repos, last 30 days"
+      "found_via": "New repos, last 30 days",
+      "first_seen": "2026-07-20",
+      "appearances": 2,
+      "history": [
+        {
+          "date": "2026-07-20",
+          "stars": 20507,
+          "score": 85,
+          "velocity": 4101.4
+        },
+        {
+          "date": "2026-07-27",
+          "stars": 22908,
+          "score": 85,
+          "velocity": 1909.0
+        }
+      ],
+      "status": "steady",
+      "star_delta": 2401,
+      "score_delta": 0,
+      "star_delta_pct": 11.7,
+      "star_delta_pct_per_day": 1.67,
+      "compared_to": "2026-07-20",
+      "days_since_compared": 7,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "Holding steady - a slower window, but a safer one."
     },
     {
       "name": "unicity-aos/aos-ce",
@@ -55,7 +141,35 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/unicity-aos/aos-ce",
-      "found_via": "New repos, last 30 days"
+      "found_via": "New repos, last 30 days",
+      "first_seen": "2026-07-27",
+      "appearances": 1,
+      "history": [
+        {
+          "date": "2026-07-27",
+          "stars": 7540,
+          "score": 85,
+          "velocity": 538.6
+        }
+      ],
+      "status": "new",
+      "star_delta": null,
+      "score_delta": null,
+      "star_delta_pct": null,
+      "star_delta_pct_per_day": null,
+      "compared_to": "2026-07-20",
+      "days_since_compared": null,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "First appearance on the board - nobody has built around it yet."
     },
     {
       "name": "oso95/scroll-world",
@@ -73,7 +187,41 @@
         "Create a paid course/guide or complementary tool"
       ],
       "url": "https://github.com/oso95/scroll-world",
-      "found_via": "New repos, last 30 days"
+      "found_via": "New repos, last 30 days",
+      "first_seen": "2026-07-20",
+      "appearances": 2,
+      "history": [
+        {
+          "date": "2026-07-20",
+          "stars": 4061,
+          "score": 80,
+          "velocity": 312.4
+        },
+        {
+          "date": "2026-07-27",
+          "stars": 5417,
+          "score": 85,
+          "velocity": 270.9
+        }
+      ],
+      "status": "accelerating",
+      "star_delta": 1356,
+      "score_delta": 5,
+      "star_delta_pct": 33.4,
+      "star_delta_pct_per_day": 4.77,
+      "compared_to": "2026-07-20",
+      "days_since_compared": 7,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "Still speeding up (4.77%/day) - the audience is arriving now."
     },
     {
       "name": "elder-plinius/T3MP3ST",
@@ -92,7 +240,53 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/elder-plinius/T3MP3ST",
-      "found_via": "New repos, last 30 days"
+      "found_via": "New repos, last 30 days",
+      "first_seen": "2026-07-06",
+      "appearances": 4,
+      "history": [
+        {
+          "date": "2026-07-06",
+          "stars": 2168,
+          "score": 80,
+          "velocity": 722.7
+        },
+        {
+          "date": "2026-07-13",
+          "stars": 4579,
+          "score": 80,
+          "velocity": 457.9
+        },
+        {
+          "date": "2026-07-20",
+          "stars": 5019,
+          "score": 85,
+          "velocity": 295.2
+        },
+        {
+          "date": "2026-07-27",
+          "stars": 5243,
+          "score": 85,
+          "velocity": 218.5
+        }
+      ],
+      "status": "steady",
+      "star_delta": 224,
+      "score_delta": 0,
+      "star_delta_pct": 4.5,
+      "star_delta_pct_per_day": 0.64,
+      "compared_to": "2026-07-20",
+      "days_since_compared": 7,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "Holding steady - a slower window, but a safer one."
     },
     {
       "name": "langchain-ai/openwiki",
@@ -111,7 +305,59 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/langchain-ai/openwiki",
-      "found_via": "Agent/MCP ecosystem"
+      "found_via": "Agent/MCP ecosystem",
+      "first_seen": "2026-07-04",
+      "appearances": 5,
+      "history": [
+        {
+          "date": "2026-07-04",
+          "stars": 3023,
+          "score": 80,
+          "velocity": 274.8
+        },
+        {
+          "date": "2026-07-06",
+          "stars": 6422,
+          "score": 85,
+          "velocity": 494.0
+        },
+        {
+          "date": "2026-07-13",
+          "stars": 10842,
+          "score": 85,
+          "velocity": 542.1
+        },
+        {
+          "date": "2026-07-20",
+          "stars": 12553,
+          "score": 85,
+          "velocity": 464.9
+        },
+        {
+          "date": "2026-07-27",
+          "stars": 13350,
+          "score": 85,
+          "velocity": 392.6
+        }
+      ],
+      "status": "steady",
+      "star_delta": 797,
+      "score_delta": 0,
+      "star_delta_pct": 6.3,
+      "star_delta_pct_per_day": 0.91,
+      "compared_to": "2026-07-20",
+      "days_since_compared": 7,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "Holding steady - a slower window, but a safer one."
     },
     {
       "name": "omnigent-ai/omnigent",
@@ -129,7 +375,59 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/omnigent-ai/omnigent",
-      "found_via": "AI repos, last 90 days"
+      "found_via": "AI repos, last 90 days",
+      "first_seen": "2026-07-04",
+      "appearances": 5,
+      "history": [
+        {
+          "date": "2026-07-04",
+          "stars": 6226,
+          "score": 90,
+          "velocity": 270.7
+        },
+        {
+          "date": "2026-07-06",
+          "stars": 6353,
+          "score": 90,
+          "velocity": 264.7
+        },
+        {
+          "date": "2026-07-13",
+          "stars": 7177,
+          "score": 90,
+          "velocity": 231.5
+        },
+        {
+          "date": "2026-07-20",
+          "stars": 7524,
+          "score": 80,
+          "velocity": 198.0
+        },
+        {
+          "date": "2026-07-27",
+          "stars": 7798,
+          "score": 80,
+          "velocity": 173.3
+        }
+      ],
+      "status": "steady",
+      "star_delta": 274,
+      "score_delta": 0,
+      "star_delta_pct": 3.6,
+      "star_delta_pct_per_day": 0.52,
+      "compared_to": "2026-07-20",
+      "days_since_compared": 7,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "Holding steady - a slower window, but a safer one."
     },
     {
       "name": "alibaba/open-code-review",
@@ -146,7 +444,53 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/alibaba/open-code-review",
-      "found_via": "Agent/MCP ecosystem"
+      "found_via": "Agent/MCP ecosystem",
+      "first_seen": "2026-07-04",
+      "appearances": 4,
+      "history": [
+        {
+          "date": "2026-07-04",
+          "stars": 9917,
+          "score": 90,
+          "velocity": 211.0
+        },
+        {
+          "date": "2026-07-06",
+          "stars": 9996,
+          "score": 90,
+          "velocity": 204.0
+        },
+        {
+          "date": "2026-07-13",
+          "stars": 10470,
+          "score": 80,
+          "velocity": 187.0
+        },
+        {
+          "date": "2026-07-27",
+          "stars": 14339,
+          "score": 80,
+          "velocity": 204.8
+        }
+      ],
+      "status": "accelerating",
+      "star_delta": 3869,
+      "score_delta": 0,
+      "star_delta_pct": 37.0,
+      "star_delta_pct_per_day": 2.64,
+      "compared_to": "2026-07-13",
+      "days_since_compared": 14,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "Still speeding up (2.64%/day) - the audience is arriving now."
     },
     {
       "name": "ayghri/i-have-adhd",
@@ -164,7 +508,35 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/ayghri/i-have-adhd",
-      "found_via": "Agent/MCP ecosystem"
+      "found_via": "Agent/MCP ecosystem",
+      "first_seen": "2026-07-27",
+      "appearances": 1,
+      "history": [
+        {
+          "date": "2026-07-27",
+          "stars": 10977,
+          "score": 80,
+          "velocity": 148.3
+        }
+      ],
+      "status": "new",
+      "star_delta": null,
+      "score_delta": null,
+      "star_delta_pct": null,
+      "star_delta_pct_per_day": null,
+      "compared_to": "2026-07-20",
+      "days_since_compared": null,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "First appearance on the board - nobody has built around it yet."
     },
     {
       "name": "cobusgreyling/loop-engineering",
@@ -182,7 +554,53 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/cobusgreyling/loop-engineering",
-      "found_via": "Agent/MCP ecosystem"
+      "found_via": "Agent/MCP ecosystem",
+      "first_seen": "2026-07-04",
+      "appearances": 4,
+      "history": [
+        {
+          "date": "2026-07-04",
+          "stars": 5634,
+          "score": 90,
+          "velocity": 225.4
+        },
+        {
+          "date": "2026-07-06",
+          "stars": 6122,
+          "score": 90,
+          "velocity": 226.7
+        },
+        {
+          "date": "2026-07-20",
+          "stars": 8746,
+          "score": 90,
+          "velocity": 213.3
+        },
+        {
+          "date": "2026-07-27",
+          "stars": 9474,
+          "score": 80,
+          "velocity": 197.4
+        }
+      ],
+      "status": "steady",
+      "star_delta": 728,
+      "score_delta": -10,
+      "star_delta_pct": 8.3,
+      "star_delta_pct_per_day": 1.19,
+      "compared_to": "2026-07-20",
+      "days_since_compared": 7,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "Holding steady - a slower window, but a safer one."
     },
     {
       "name": "img2threejs/img2threejs",
@@ -199,7 +617,35 @@
         "Create a paid course/guide or complementary tool"
       ],
       "url": "https://github.com/img2threejs/img2threejs",
-      "found_via": "New repos, last 30 days"
+      "found_via": "New repos, last 30 days",
+      "first_seen": "2026-07-27",
+      "appearances": 1,
+      "history": [
+        {
+          "date": "2026-07-27",
+          "stars": 6461,
+          "score": 75,
+          "velocity": 538.4
+        }
+      ],
+      "status": "new",
+      "star_delta": null,
+      "score_delta": null,
+      "star_delta_pct": null,
+      "star_delta_pct_per_day": null,
+      "compared_to": "2026-07-20",
+      "days_since_compared": null,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "First appearance on the board - nobody has built around it yet."
     },
     {
       "name": "oomol-lab/open-connector",
@@ -217,7 +663,196 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/oomol-lab/open-connector",
-      "found_via": "New repos, last 30 days"
+      "found_via": "New repos, last 30 days",
+      "first_seen": "2026-07-20",
+      "appearances": 2,
+      "history": [
+        {
+          "date": "2026-07-20",
+          "stars": 3024,
+          "score": 75,
+          "velocity": 151.2
+        },
+        {
+          "date": "2026-07-27",
+          "stars": 3377,
+          "score": 75,
+          "velocity": 120.6
+        }
+      ],
+      "status": "steady",
+      "star_delta": 353,
+      "score_delta": 0,
+      "star_delta_pct": 11.7,
+      "star_delta_pct_per_day": 1.67,
+      "compared_to": "2026-07-20",
+      "days_since_compared": 7,
+      "play": {
+        "key": "docs",
+        "title": "Unofficial docs site",
+        "steps": [
+          "Register a clear domain and put up a single quickstart page",
+          "Cover the three things the README does not: install gotchas, a real config, one worked example",
+          "Link it from the repo's issues where people ask those exact questions",
+          "Add an email capture; that list is the asset, not the page"
+        ]
+      },
+      "why_now": "Holding steady - a slower window, but a safer one."
     }
-  ]
+  ],
+  "departed": [
+    {
+      "name": "op7418/guizang-ppt-skill",
+      "url": "https://github.com/op7418/guizang-ppt-skill",
+      "score": 90,
+      "stars": 21873
+    },
+    {
+      "name": "nexu-io/open-design",
+      "url": "https://github.com/nexu-io/open-design",
+      "score": 80,
+      "stars": 79866
+    },
+    {
+      "name": "XiaomiMiMo/MiMo-Code",
+      "url": "https://github.com/XiaomiMiMo/MiMo-Code",
+      "score": 75,
+      "stars": 12243
+    },
+    {
+      "name": "Yuan1z0825/nature-skills",
+      "url": "https://github.com/Yuan1z0825/nature-skills",
+      "score": 75,
+      "stars": 29939
+    }
+  ],
+  "summary": {
+    "scans_archived": 5,
+    "tracked": 12,
+    "high_conviction": 12,
+    "high_conviction_delta": 0,
+    "new_entries": 4,
+    "stars_gained": 9891,
+    "median_velocity": 244.7,
+    "previous_date": "2026-07-20",
+    "days_since_previous": 7,
+    "sparklines": {
+      "tracked": [
+        {
+          "date": "2026-07-04",
+          "value": 12
+        },
+        {
+          "date": "2026-07-06",
+          "value": 12
+        },
+        {
+          "date": "2026-07-13",
+          "value": 12
+        },
+        {
+          "date": "2026-07-20",
+          "value": 12
+        },
+        {
+          "date": "2026-07-27",
+          "value": 12
+        }
+      ],
+      "high": [
+        {
+          "date": "2026-07-04",
+          "value": 12
+        },
+        {
+          "date": "2026-07-06",
+          "value": 12
+        },
+        {
+          "date": "2026-07-13",
+          "value": 12
+        },
+        {
+          "date": "2026-07-20",
+          "value": 12
+        },
+        {
+          "date": "2026-07-27",
+          "value": 12
+        }
+      ],
+      "median_velocity": [
+        {
+          "date": "2026-07-04",
+          "value": 274.6
+        },
+        {
+          "date": "2026-07-06",
+          "value": 275.2
+        },
+        {
+          "date": "2026-07-13",
+          "value": 338.0
+        },
+        {
+          "date": "2026-07-20",
+          "value": 313.1
+        },
+        {
+          "date": "2026-07-27",
+          "value": 244.7
+        }
+      ]
+    }
+  },
+  "focus": {
+    "name": "unicity-aos/aos-ce",
+    "url": "https://github.com/unicity-aos/aos-ce",
+    "score": 85,
+    "status": "new",
+    "why_now": "First appearance on the board - nobody has built around it yet.",
+    "play": {
+      "key": "docs",
+      "title": "Unofficial docs site",
+      "steps": [
+        "Register a clear domain and put up a single quickstart page",
+        "Cover the three things the README does not: install gotchas, a real config, one worked example",
+        "Link it from the repo's issues where people ask those exact questions",
+        "Add an email capture; that list is the asset, not the page"
+      ]
+    }
+  },
+  "daily_loop": [
+    {
+      "step": "Read the board",
+      "minutes": 5,
+      "detail": "Open the radar. Look only at New and Accelerating - steady and cooling entries are yesterday's news."
+    },
+    {
+      "step": "Pick exactly one",
+      "minutes": 5,
+      "detail": "Highest score you have not already worked. One per day. Two is zero."
+    },
+    {
+      "step": "Check the gap is real",
+      "minutes": 20,
+      "detail": "Open the repo's issues and discussions. Search the name on Reddit and X. You want people asking for the thing you'd sell."
+    },
+    {
+      "step": "Ship the smallest sellable version",
+      "minutes": 60,
+      "detail": "One page, one config pack, one guide. If it cannot be done in an hour, it is the wrong first version."
+    },
+    {
+      "step": "Put it where the demand already is",
+      "minutes": 15,
+      "detail": "Reply in the issue thread you found, post it where you saw the question. Distribution on day one, not day ten."
+    },
+    {
+      "step": "Log the result",
+      "minutes": 5,
+      "detail": "Shipped what, posted where, any response. Kill anything with zero signal after three days."
+    }
+  ],
+  "loop_minutes": 110
 }
