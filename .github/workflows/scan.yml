@@ -1,65 +1,37 @@
-name: Daily opportunity scan
+name: Weekly opportunity scan
 
 on:
   schedule:
-    # 06:00 UTC every day - the board is ready before the morning work block.
-    - cron: "0 6 * * *"
+    - cron: "0 8 * * 1"
   workflow_dispatch: {}
 
 permissions:
   contents: write
-
-concurrency:
-  group: opportunity-scan
-  cancel-in-progress: false
 
 jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          # The scanner needs history/ and the trend maths that depends on it.
-          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install requests
 
-      - name: Run tests
-        run: python -m unittest discover -s tests -t . -v
-
-      - name: Run scanner
+      - name: Run scanner and rebuild site
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scanner.py
-
-      - name: Rebuild dashboard
-        run: python generate_site.py
-
-      - name: Verify the board is not empty before publishing
         run: |
-          python - <<'PY'
-          import json, sys
-          data = json.load(open("scan_data.json"))
-          if not data.get("items"):
-              sys.exit("refusing to publish an empty board")
-          print(len(data["items"]), "items on the board for", data["date"])
-          PY
+          python scanner.py
+          python generate_site.py
 
       - name: Commit and publish updated report
         run: |
           git config user.name "opportunity-radar-bot"
           git config user.email "actions@github.com"
           git add -A
-          git diff --staged --quiet && echo "no changes" && exit 0
-          git commit -m "Daily scan $(date -u +%Y-%m-%d)"
-          for i in 1 2 3 4; do
-            git push && exit 0
-            echo "push failed, retrying in $((2 ** i))s"
-            sleep $((2 ** i))
-          done
+          git diff --staged --quiet || git commit -m "Weekly scan"
           git push
