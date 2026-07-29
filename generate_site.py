@@ -1,24 +1,883 @@
-import json, html, os
-data = json.load(open("scan_data.json"))
-cfg = json.load(open("config.json")) if os.path.exists("config.json") else {}
-title = cfg.get("site_title", "Opportunity Radar")
-tagline = cfg.get("tagline", "Fast-rising GitHub projects, scored for the money-making gaps around them.")
-news = cfg.get("newsletter_url", "")
-prem = cfg.get("premium_url", "")
-spons = cfg.get("sponsor_email", "")
-items = data["items"]
-maxv = max([x["velocity"] for x in items] or [1])
-CSS = "body{font-family:Arial,sans-serif;background:#F5F7F2;color:#101915;max-width:760px;margin:0 auto;padding:40px 20px}.card{background:#fff;border:2px solid #101915;border-radius:6px;padding:20px;margin-bottom:18px}.score{color:#2743E3;font-weight:bold;font-size:20px}.bar{height:10px;background:#D8DED6;border:1px solid #101915;border-radius:2px}.fill{height:100%;background:#2743E3}a.btn{background:#2743E3;color:#fff;text-decoration:none;padding:10px 16px;border-radius:4px;margin-right:8px;font-weight:bold}"
-link_news = ("<a class='btn' href='" + html.escape(news) + "'>Get this weekly by email</a>") if news else ""
-link_prem = ("<a class='btn' href='" + html.escape(prem) + "'>Full deep-dive report</a>") if prem else ""
-link_spons = ("<a class='btn' href='mailto:" + html.escape(spons) + "'>Sponsor this radar</a>") if spons else ""
-links = link_news + link_prem + link_spons
-def make_card(i, it): pct = max(min(it["velocity"] / maxv * 100, 100), 2); ideas_html = "".join(["<li>" + html.escape(x) + "</li>" for x in it["ideas"]]); reasons = html.escape("; ".join(it["reasons"])); return "<div class='card'><b>" + str(i).zfill(2) + "</b> <a href='" + html.escape(it["url"]) + "'>" + html.escape(it["name"]) + "</a> <span class='score'>" + str(it["score"]) + "/100</span><p>" + html.escape(it["description"]) + "</p><div>Momentum: " + str(it["velocity"]) + " stars/day (" + str(it["stars"]) + " total)</div><div class='bar'><div class='fill' style='width:" + str(round(pct,1)) + "%'></div></div><p style='color:#66746C;font-size:13px'>" + reasons + "</p><b>Money angles</b><ul>" + ideas_html + "</ul></div>"
-cards_html = "".join([make_card(i, it) for i, it in enumerate(items, 1)])
-header = "<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>" + html.escape(title) + "</title><style>" + CSS + "</style></head><body>"
-header += "<div style='color:#2743E3;font-weight:bold'>Scan date " + data["date"] + " - auto-updates weekly</div><h1>" + html.escape(title) + "</h1><p>" + html.escape(tagline) + "</p>" + links
-footer = "<footer>Score = momentum + ecosystem angle + commercial gap. Data: public GitHub API.</footer></body></html>"
-page = header + cards_html + footer
-os.makedirs("docs", exist_ok=True)
-open("docs/index.html", "w").write(page)
-print("Site generated: docs/index.html (" + str(len(items)) + " items)")
+"""Render the radar dashboard to ``docs/index.html``.
+
+All content is injected as JSON and built into the DOM client-side with
+``textContent`` - repo names and descriptions come from the GitHub API and are
+never trusted as markup.
+"""
+
+import html
+import json
+import os
+
+TEMPLATE = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<style>
+:root {
+  color-scheme: light;
+  --surface-1: #fcfcfb;
+  --plane: #f9f9f7;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --series: #2a78d6;
+  --track: #b7d3f6;
+  --good: #0ca30c;
+  --warning: #fab219;
+  --critical: #d03b3b;
+  --success-text: #006300;
+  --shadow: 0 1px 2px rgba(11,11,11,0.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --plane: #0d0d0d;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --muted: #898781;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255,255,255,0.10);
+    --series: #3987e5;
+    --track: #184f95;
+    --success-text: #0ca30c;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-1: #1a1a19;
+  --plane: #0d0d0d;
+  --ink: #ffffff;
+  --ink-2: #c3c2b7;
+  --muted: #898781;
+  --grid: #2c2c2a;
+  --axis: #383835;
+  --border: rgba(255,255,255,0.10);
+  --series: #3987e5;
+  --track: #184f95;
+  --success-text: #0ca30c;
+  --shadow: none;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--plane);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 32px 20px 72px; }
+a { color: var(--series); }
+
+.topbar { display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.topbar h1 { font-size: 30px; margin: 4px 0 6px; letter-spacing: -0.02em; }
+.topbar p { margin: 0; color: var(--ink-2); max-width: 60ch; }
+.stamp {
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--muted); font-weight: 600;
+}
+.spacer { flex: 1 1 auto; }
+button, select, input {
+  font: inherit; color: inherit;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 8px; padding: 7px 11px;
+}
+button { cursor: pointer; }
+button:hover, select:hover, input:hover { border-color: var(--axis); }
+button[aria-pressed="true"] {
+  background: var(--series); border-color: var(--series); color: #fff;
+}
+:focus-visible { outline: 2px solid var(--series); outline-offset: 2px; }
+
+.panel {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+.section-title {
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--muted); font-weight: 700; margin: 36px 0 12px;
+}
+.title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* --- Today's focus: the one hero figure on the page --- */
+.focus { margin-top: 24px; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.5fr); gap: 28px; }
+.hero-num { font-size: 60px; font-weight: 650; line-height: 1; letter-spacing: -0.03em; }
+.hero-den { font-size: 20px; color: var(--muted); font-weight: 500; }
+.focus-repo { font-size: 19px; font-weight: 620; margin: 14px 0 2px; word-break: break-word; }
+.focus-why { color: var(--ink-2); margin: 6px 0 0; }
+.play-title { font-weight: 620; margin: 0 0 10px; }
+.play-steps { margin: 0; padding: 0; list-style: none; counter-reset: s; }
+.play-steps li {
+  counter-increment: s; position: relative; padding: 0 0 12px 34px;
+  color: var(--ink-2); border-left: 1px solid var(--grid); margin-left: 11px;
+}
+.play-steps li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.play-steps li::before {
+  content: counter(s); position: absolute; left: -11px; top: 0;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--surface-1); border: 1px solid var(--axis);
+  color: var(--ink); font-size: 12px; font-weight: 650;
+  display: grid; place-items: center;
+}
+
+/* --- Stat tiles --- */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 14px; }
+.tile-label { font-size: 13px; color: var(--ink-2); }
+.tile-value { font-size: 30px; font-weight: 620; line-height: 1.15; margin-top: 4px; letter-spacing: -0.02em; }
+.tile-foot { display: flex; align-items: center; gap: 8px; margin-top: 8px; min-height: 22px; }
+.delta { font-size: 13px; font-weight: 600; }
+.delta.up { color: var(--success-text); }
+.delta.flat { color: var(--muted); }
+.delta.down { color: var(--critical); }
+
+/* --- Filter row: one row, above everything it scopes --- */
+.filters {
+  display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+  margin: 14px 0 18px; padding: 12px;
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+}
+.filters input[type="search"] { min-width: 120px; flex: 0 1 170px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips button { padding: 6px 12px; font-size: 14px; }
+.filter-label { font-size: 13px; color: var(--muted); }
+
+/* --- Board --- */
+.board { display: grid; gap: 14px; }
+.card { display: grid; grid-template-columns: minmax(0,1fr) 232px; gap: 22px; }
+.rank { color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 600; }
+.card-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.card-name { font-size: 17px; font-weight: 620; word-break: break-word; }
+.card-desc { color: var(--ink-2); margin: 8px 0 0; }
+.meta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 12px; font-size: 13px; color: var(--muted); }
+.meta b { color: var(--ink); font-weight: 620; font-variant-numeric: tabular-nums; }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; font-weight: 640; padding: 2px 9px 2px 7px;
+  border-radius: 999px; border: 1px solid var(--border); color: var(--ink-2);
+  white-space: nowrap;
+}
+.pill .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.pill.accelerating { color: var(--success-text); }
+.pill.cooling { color: var(--warning); }
+.pill.new { color: var(--series); }
+.pill.steady { color: var(--muted); }
+
+.score-line { display: flex; align-items: baseline; justify-content: space-between; }
+.score-num { font-size: 24px; font-weight: 640; letter-spacing: -0.02em; }
+.score-cap { font-size: 13px; color: var(--muted); }
+.meter { height: 10px; border-radius: 5px; background: var(--track); overflow: hidden; margin-top: 6px; }
+.meter > i { display: block; height: 100%; background: var(--series); border-radius: 0 5px 5px 0; }
+.aside-block { margin-top: 16px; }
+.aside-block h4 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin: 0 0 6px; font-weight: 700; }
+.breakdown { list-style: none; margin: 0; padding: 0; font-size: 13px; }
+.breakdown li { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; color: var(--ink-2); border-bottom: 1px solid var(--grid); }
+.breakdown li:last-child { border-bottom: 0; }
+.breakdown span:last-child { font-variant-numeric: tabular-nums; font-weight: 640; color: var(--ink); }
+.breakdown li.negative span:last-child { color: var(--critical); }
+.breakdown.reasons li { display: block; }
+.breakdown.reasons span:last-child { font-weight: 400; color: var(--ink-2); }
+.angles { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 14px; }
+.angles li { margin-bottom: 3px; }
+.next-move {
+  margin-top: 12px; padding: 10px 12px; border-radius: 8px;
+  background: var(--plane); border: 1px solid var(--border); font-size: 14px;
+}
+.next-move b { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin-bottom: 3px; }
+.topics { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.topic { font-size: 12px; color: var(--muted); border: 1px solid var(--grid); border-radius: 6px; padding: 1px 7px; }
+
+/* --- Daily loop --- */
+.loop { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.loop li { display: grid; grid-template-columns: 40px minmax(0,1fr); gap: 14px; padding: 12px 0; border-top: 1px solid var(--grid); }
+.loop li:first-child { border-top: 0; }
+.loop .mins { font-variant-numeric: tabular-nums; color: var(--series); font-weight: 640; font-size: 13px; padding-top: 1px; }
+.loop .what { font-weight: 620; }
+.loop .detail { color: var(--ink-2); font-size: 14px; }
+
+/* --- Table view (the accessible twin) --- */
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.hidden { display: none; }
+.empty { color: var(--muted); padding: 32px 0; text-align: center; }
+
+.gone { display: flex; gap: 8px; flex-wrap: wrap; }
+.gone a { font-size: 13px; color: var(--ink-2); text-decoration: none; border: 1px solid var(--grid); border-radius: 999px; padding: 3px 11px; }
+.gone a:hover { border-color: var(--axis); }
+
+footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 13px; }
+.cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.cta a { background: var(--series); color: #fff; text-decoration: none; padding: 9px 15px; border-radius: 8px; font-weight: 620; font-size: 14px; }
+
+#tip {
+  position: fixed; pointer-events: none; opacity: 0; transition: opacity .12s;
+  background: var(--surface-1); color: var(--ink);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 7px 10px; font-size: 13px; box-shadow: 0 4px 14px rgba(0,0,0,.14);
+  z-index: 50; max-width: 240px;
+}
+#tip .v { font-weight: 650; }
+#tip .k { color: var(--ink-2); font-size: 12px; }
+
+@media (max-width: 780px) {
+  .focus { grid-template-columns: 1fr; gap: 20px; }
+  .card { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <div>
+      <div class="stamp" id="stamp"></div>
+      <h1>__TITLE__</h1>
+      <p>__TAGLINE__</p>
+    </div>
+    <div class="spacer"></div>
+    <button id="theme" type="button" aria-label="Toggle colour theme">Theme</button>
+  </header>
+
+  <div class="cta">__CTA__</div>
+
+  <div class="section-title">Today's pick</div>
+  <section class="panel focus" id="focus"></section>
+
+  <div class="section-title">Board health</div>
+  <div class="tiles" id="tiles"></div>
+
+  <div class="section-title">The daily loop &mdash; <span id="loopmins"></span></div>
+  <section class="panel"><ol class="loop" id="loop"></ol></section>
+
+  <div class="section-title title-row">
+    <span>Opportunities</span>
+    <div class="chips" role="group" aria-label="View">
+      <button type="button" id="viewCards" aria-pressed="true">Cards</button>
+      <button type="button" id="viewTable" aria-pressed="false">Table</button>
+    </div>
+  </div>
+  <div class="filters">
+    <input type="search" id="q" placeholder="Search" aria-label="Search name, description, language or topic">
+    <div class="chips" id="statusChips" role="group" aria-label="Filter by trend"></div>
+    <span class="filter-label"><label for="minScore">Min score</label></span>
+    <select id="minScore">
+      <option value="0">Any</option>
+      <option value="50">50+</option>
+      <option value="60">60+</option>
+      <option value="70">70+</option>
+      <option value="80">80+</option>
+    </select>
+    <span class="filter-label"><label for="sort">Sort</label></span>
+    <select id="sort">
+      <option value="score">Score</option>
+      <option value="velocity">Momentum</option>
+      <option value="star_delta">Stars gained</option>
+      <option value="stars">Total stars</option>
+      <option value="age_days">Newest</option>
+    </select>
+  </div>
+
+  <div id="count" class="filter-label" style="margin-bottom:10px"></div>
+  <div class="board" id="board"></div>
+  <div class="table-wrap hidden" id="tableWrap"></div>
+
+  <div id="goneSection"></div>
+
+  <footer>
+    Score = momentum + ecosystem fit + freshness + commercial gap &minus; maintenance risk,
+    capped at 100. Trends compare each scan with the one before it.
+    Data: public GitHub Search API. <span id="archived"></span>
+  </footer>
+</div>
+<div id="tip" role="status" aria-live="polite"></div>
+
+<script type="application/json" id="radar-data">__DATA__</script>
+<script>
+(function () {
+  "use strict";
+  var DATA = JSON.parse(document.getElementById("radar-data").textContent);
+  var items = DATA.items || [];
+  var summary = DATA.summary || {};
+
+  /* ---------- helpers ---------- */
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined && text !== null) n.textContent = String(text);
+    return n;
+  }
+  function compact(n) {
+    if (n === null || n === undefined) return "-";
+    var a = Math.abs(n);
+    if (a >= 1e6) return (n / 1e6).toFixed(1).replace(/\\.0$/, "") + "M";
+    if (a >= 1e4) return Math.round(n / 1e3) + "K";
+    if (a >= 1e3) return (n / 1e3).toFixed(1).replace(/\\.0$/, "") + "K";
+    return String(n);
+  }
+  function group(n) {
+    return n === null || n === undefined ? "-" : n.toLocaleString("en-US");
+  }
+  function signed(n) { return (n > 0 ? "+" : "") + group(n); }
+
+  var STATUS = {
+    "new":          { label: "New",          mark: "\\u2726" },
+    "accelerating": { label: "Accelerating", mark: "\\u25B2" },
+    "steady":       { label: "Steady",       mark: "\\u25CF" },
+    "cooling":      { label: "Cooling",      mark: "\\u25BC" }
+  };
+  function statusPill(status) {
+    var s = STATUS[status] || STATUS["steady"];
+    var p = el("span", "pill " + status);
+    p.appendChild(el("span", "mark", s.mark));
+    p.appendChild(el("span", null, s.label));
+    p.title = "Trend since the previous scan";
+    return p;
+  }
+
+  /* ---------- tooltip (hover + keyboard focus show the same thing) ---------- */
+  var tip = document.getElementById("tip");
+  function showTip(e, value, key) {
+    tip.textContent = "";
+    tip.appendChild(el("div", "v", value));
+    if (key) tip.appendChild(el("div", "k", key));
+    tip.style.opacity = "1";
+    var r = tip.getBoundingClientRect();
+    var x = (e.clientX !== undefined ? e.clientX : 0) + 14;
+    var y = (e.clientY !== undefined ? e.clientY : 0) + 16;
+    if (e.clientX === undefined && e.target && e.target.getBoundingClientRect) {
+      var t = e.target.getBoundingClientRect();
+      x = t.left; y = t.bottom + 8;
+    }
+    tip.style.left = Math.min(x, window.innerWidth - r.width - 12) + "px";
+    tip.style.top = Math.min(y, window.innerHeight - r.height - 12) + "px";
+  }
+  function hideTip() { tip.style.opacity = "0"; }
+
+  /* ---------- sparkline: 2px line, muted, accent end-dot with surface ring ---------- */
+  var NS = "http://www.w3.org/2000/svg";
+  function sparkline(points, opts) {
+    opts = opts || {};
+    var w = opts.width || 200, h = opts.height || 40, pad = 6;
+    var svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", "0 0 " + w + " " + h);
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("height", String(h));
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", opts.label || "Trend over recent scans");
+    if (!points || points.length < 2) {
+      var note = document.createElementNS(NS, "text");
+      note.setAttribute("x", "0"); note.setAttribute("y", String(h / 2 + 4));
+      note.setAttribute("font-size", "12"); note.setAttribute("fill", "var(--muted)");
+      note.textContent = points && points.length ? "First scan - no trend yet" : "No history";
+      svg.appendChild(note);
+      return svg;
+    }
+    var vals = points.map(function (p) { return p.value; });
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+    var span = hi - lo || 1;
+    var xs = function (i) { return pad + i * (w - pad * 2) / (points.length - 1); };
+    var ys = function (v) { return h - pad - (v - lo) / span * (h - pad * 2); };
+
+    var d = points.map(function (p, i) {
+      return (i ? "L" : "M") + xs(i).toFixed(1) + " " + ys(p.value).toFixed(1);
+    }).join(" ");
+    var line = document.createElementNS(NS, "path");
+    line.setAttribute("d", d);
+    line.setAttribute("fill", "none");
+    line.setAttribute("stroke", "var(--axis)");
+    line.setAttribute("stroke-width", "2");
+    line.setAttribute("stroke-linecap", "round");
+    line.setAttribute("stroke-linejoin", "round");
+    svg.appendChild(line);
+
+    // Latest segment carries the accent - the current period is the story.
+    var last = points.length - 1;
+    var tail = document.createElementNS(NS, "path");
+    tail.setAttribute("d", "M" + xs(last - 1).toFixed(1) + " " + ys(points[last - 1].value).toFixed(1) +
+                           " L" + xs(last).toFixed(1) + " " + ys(points[last].value).toFixed(1));
+    tail.setAttribute("fill", "none");
+    tail.setAttribute("stroke", "var(--series)");
+    tail.setAttribute("stroke-width", "2");
+    tail.setAttribute("stroke-linecap", "round");
+    svg.appendChild(tail);
+
+    points.forEach(function (p, i) {
+      var isLast = i === last;
+      if (isLast) {
+        var ring = document.createElementNS(NS, "circle");
+        ring.setAttribute("cx", xs(i).toFixed(1));
+        ring.setAttribute("cy", ys(p.value).toFixed(1));
+        ring.setAttribute("r", "6");
+        ring.setAttribute("fill", "var(--surface-1)");
+        svg.appendChild(ring);
+        var dot = document.createElementNS(NS, "circle");
+        dot.setAttribute("cx", xs(i).toFixed(1));
+        dot.setAttribute("cy", ys(p.value).toFixed(1));
+        dot.setAttribute("r", "4");
+        dot.setAttribute("fill", "var(--series)");
+        svg.appendChild(dot);
+      }
+      // Hit target is far bigger than the mark - nobody lands on a 4px dot.
+      var hit = document.createElementNS(NS, "rect");
+      var half = (w - pad * 2) / (points.length - 1) / 2;
+      hit.setAttribute("x", Math.max(xs(i) - half, 0).toFixed(1));
+      hit.setAttribute("y", "0");
+      hit.setAttribute("width", Math.max(half * 2, 24).toFixed(1));
+      hit.setAttribute("height", String(h));
+      hit.setAttribute("fill", "transparent");
+      hit.setAttribute("tabindex", "0");
+      hit.setAttribute("role", "img");
+      var readout = (opts.format ? opts.format(p.value) : group(p.value));
+      hit.setAttribute("aria-label", readout + " on " + p.date);
+      hit.addEventListener("pointermove", function (e) { showTip(e, readout, p.date); });
+      hit.addEventListener("pointerleave", hideTip);
+      hit.addEventListener("focus", function (e) { showTip(e, readout, p.date); });
+      hit.addEventListener("blur", hideTip);
+      svg.appendChild(hit);
+    });
+    return svg;
+  }
+
+  /* ---------- stat tiles ---------- */
+  function deltaClass(n) { return n > 0 ? "up" : n < 0 ? "down" : "flat"; }
+  function tile(cfg) {
+    var box = el("div", "panel");
+    box.appendChild(el("div", "tile-label", cfg.label));
+    box.appendChild(el("div", "tile-value", cfg.value));
+    var foot = el("div", "tile-foot");
+    if (cfg.delta !== null && cfg.delta !== undefined) {
+      var d = el("span", "delta " + deltaClass(cfg.delta), signed(cfg.delta));
+      d.title = cfg.deltaNote || "";
+      foot.appendChild(d);
+    }
+    if (cfg.note) foot.appendChild(el("span", "filter-label", cfg.note));
+    box.appendChild(foot);
+    // A flat line carries no information - drop it rather than draw a ruler.
+    var varies = cfg.spark && cfg.spark.length > 1 &&
+      cfg.spark.some(function (p) { return p.value !== cfg.spark[0].value; });
+    if (varies) {
+      box.appendChild(sparkline(cfg.spark, {
+        height: 34, label: cfg.label + " over recent scans", format: cfg.format
+      }));
+    }
+    return box;
+  }
+
+  function renderTiles() {
+    var host = document.getElementById("tiles");
+    var sp = summary.sparklines || {};
+    var since = summary.previous_date ? "vs " + summary.previous_date : "first scan";
+    [
+      { label: "Tracked opportunities", value: group(summary.tracked || items.length), spark: sp.tracked },
+      { label: "High conviction (70+)", value: group(summary.high_conviction || 0),
+        delta: summary.high_conviction_delta, deltaNote: since, note: since, spark: sp.high },
+      { label: "New since last scan", value: group(summary.new_entries || 0),
+        note: summary.days_since_previous ? summary.days_since_previous + " days of gap" : "" },
+      { label: "Stars gained across board", value: compact(summary.stars_gained || 0),
+        note: since, format: compact }
+    ].forEach(function (c) { host.appendChild(tile(c)); });
+  }
+
+  /* ---------- today's pick ---------- */
+  function renderFocus() {
+    var host = document.getElementById("focus");
+    var f = DATA.focus;
+    if (!f) { host.appendChild(el("p", "empty", "No pick today - the board is empty.")); return; }
+
+    var left = el("div");
+    var hero = el("div");
+    hero.appendChild(el("span", "hero-num", String(f.score)));
+    hero.appendChild(el("span", "hero-den", "/100"));
+    left.appendChild(hero);
+    var name = el("div", "focus-repo");
+    var link = el("a", null, f.name);
+    link.href = f.url; link.rel = "noopener";
+    name.appendChild(link);
+    left.appendChild(name);
+    left.appendChild(statusPill(f.status));
+    left.appendChild(el("p", "focus-why", f.why_now));
+
+    var right = el("div");
+    if (f.play) {
+      right.appendChild(el("div", "play-title", "Play \\u2014 " + f.play.title));
+      var ol = el("ol", "play-steps");
+      f.play.steps.forEach(function (s) { ol.appendChild(el("li", null, s)); });
+      right.appendChild(ol);
+    }
+    host.appendChild(left);
+    host.appendChild(right);
+  }
+
+  /* ---------- daily loop ---------- */
+  function renderLoop() {
+    var host = document.getElementById("loop");
+    (DATA.daily_loop || []).forEach(function (s) {
+      var li = el("li");
+      li.appendChild(el("div", "mins", s.minutes + "m"));
+      var body = el("div");
+      body.appendChild(el("div", "what", s.step));
+      body.appendChild(el("div", "detail", s.detail));
+      li.appendChild(body);
+      host.appendChild(li);
+    });
+    document.getElementById("loopmins").textContent =
+      (DATA.loop_minutes || 0) + " minutes a day";
+  }
+
+  /* ---------- board ---------- */
+  function card(item, rank) {
+    var wrapper = el("article", "panel card");
+
+    var main = el("div");
+    var head = el("div", "card-head");
+    head.appendChild(el("span", "rank", String(rank).padStart(2, "0")));
+    var nm = el("span", "card-name");
+    var a = el("a", null, item.name);
+    a.href = item.url; a.rel = "noopener";
+    nm.appendChild(a);
+    head.appendChild(nm);
+    head.appendChild(statusPill(item.status || "new"));
+    main.appendChild(head);
+    main.appendChild(el("p", "card-desc", item.description));
+
+    var meta = el("div", "meta");
+    function stat(label, value) {
+      // Recovered snapshots don't carry every field - skip rather than print "-".
+      if (value === null || value === undefined || value === "-") return;
+      var s = el("span");
+      s.appendChild(el("b", null, value));
+      if (label) s.appendChild(document.createTextNode(" " + label));
+      meta.appendChild(s);
+    }
+    stat("stars", group(item.stars));
+    stat("stars/day", group(item.velocity));
+    if (item.star_delta !== null && item.star_delta !== undefined) {
+      stat("since " + item.compared_to, signed(item.star_delta));
+    }
+    stat("days old", item.age_days === undefined ? null : group(item.age_days));
+    stat("open issues", item.open_issues === undefined ? null : group(item.open_issues));
+    stat(null, item.language);
+    main.appendChild(meta);
+
+    if (item.topics && item.topics.length) {
+      var topics = el("div", "topics");
+      item.topics.forEach(function (t) { topics.appendChild(el("span", "topic", t)); });
+      main.appendChild(topics);
+    }
+
+    var angles = el("div", "aside-block");
+    angles.appendChild(el("h4", null, "Money angles"));
+    var ul = el("ul", "angles");
+    (item.ideas || []).forEach(function (i) { ul.appendChild(el("li", null, i)); });
+    angles.appendChild(ul);
+    main.appendChild(angles);
+
+    if (item.play) {
+      var nx = el("div", "next-move");
+      nx.appendChild(el("b", null, "Next move \\u2014 " + item.play.title));
+      nx.appendChild(document.createTextNode(item.play.steps[0]));
+      main.appendChild(nx);
+    }
+
+    var aside = el("div");
+    var line = el("div", "score-line");
+    line.appendChild(el("span", "score-num", item.score + "/100"));
+    if (item.score_delta !== null && item.score_delta !== undefined && item.score_delta !== 0) {
+      line.appendChild(el("span", "delta " + deltaClass(item.score_delta), signed(item.score_delta)));
+    }
+    aside.appendChild(line);
+
+    var meter = el("div", "meter");
+    meter.setAttribute("role", "img");
+    meter.setAttribute("aria-label", "Score " + item.score + " out of 100");
+    var fill = el("i");
+    fill.style.width = Math.max(item.score, 2) + "%";
+    meter.appendChild(fill);
+    meter.addEventListener("pointermove", function (e) { showTip(e, item.score + "/100", "Opportunity score"); });
+    meter.addEventListener("pointerleave", hideTip);
+    aside.appendChild(meter);
+    aside.appendChild(el("div", "score-cap", "Tracked since " + (item.first_seen || "today")));
+
+    var trend = el("div", "aside-block");
+    trend.appendChild(el("h4", null, "Stars over recent scans"));
+    trend.appendChild(sparkline(
+      (item.history || []).map(function (p) { return { date: p.date, value: p.stars }; }),
+      { height: 44, label: "Stars for " + item.name + " over recent scans", format: group }
+    ));
+    aside.appendChild(trend);
+
+    var bd = el("div", "aside-block");
+    var hasComponents = !!(item.score_components && item.score_components.length);
+    var bl = el("ul", hasComponents ? "breakdown" : "breakdown reasons");
+    if (hasComponents) {
+      bd.appendChild(el("h4", null, "Score breakdown"));
+      item.score_components.forEach(function (c) {
+        var li = el("li", c.points < 0 ? "negative" : null);
+        var lab = el("span", null, c.label);
+        lab.title = c.detail;
+        li.appendChild(lab);
+        li.appendChild(el("span", null, (c.points > 0 ? "+" : "") + c.points));
+        bl.appendChild(li);
+      });
+    } else {
+      // Snapshots recovered from git predate the scored breakdown.
+      bd.appendChild(el("h4", null, "Why it scored"));
+      (item.reasons || []).forEach(function (r) {
+        var li = el("li");
+        li.appendChild(el("span", null, r));
+        bl.appendChild(li);
+      });
+    }
+    bd.appendChild(bl);
+    aside.appendChild(bd);
+
+    wrapper.appendChild(main);
+    wrapper.appendChild(aside);
+    return wrapper;
+  }
+
+  /* ---------- table twin: every value reachable without hovering ---------- */
+  var COLS = [
+    ["#", function (it, i) { return String(i + 1); }, true],
+    ["Repository", function (it) { return it.name; }, false],
+    ["Trend", function (it) { return (STATUS[it.status] || STATUS.steady).label; }, false],
+    ["Score", function (it) { return String(it.score); }, true],
+    ["Stars", function (it) { return group(it.stars); }, true],
+    ["Stars/day", function (it) { return group(it.velocity); }, true],
+    ["Gained", function (it) { return it.star_delta === null || it.star_delta === undefined ? "-" : signed(it.star_delta); }, true],
+    ["Forks", function (it) { return group(it.forks); }, true],
+    ["Open issues", function (it) { return group(it.open_issues); }, true],
+    ["Age (days)", function (it) { return group(it.age_days); }, true],
+    ["First seen", function (it) { return it.first_seen || "-"; }, false],
+    ["Next move", function (it) { return it.play ? it.play.title : "-"; }, false]
+  ];
+  function table(rows) {
+    var t = el("table");
+    var caption = el("caption", "filter-label", "Every value on this page, as a table");
+    caption.style.textAlign = "left";
+    caption.style.paddingBottom = "8px";
+    t.appendChild(caption);
+    var thead = el("thead"), htr = el("tr");
+    COLS.forEach(function (c) {
+      var th = el("th", c[2] ? "num" : null, c[0]);
+      th.scope = "col";
+      htr.appendChild(th);
+    });
+    thead.appendChild(htr);
+    t.appendChild(thead);
+    var tb = el("tbody");
+    rows.forEach(function (it, i) {
+      var tr = el("tr");
+      COLS.forEach(function (c) { tr.appendChild(el("td", c[2] ? "num" : null, c[1](it, i))); });
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);
+    return t;
+  }
+
+  /* ---------- filters scope everything below them ---------- */
+  var state = { q: "", status: "all", min: 0, sort: "score", view: "cards" };
+
+  function visible() {
+    var q = state.q.trim().toLowerCase();
+    var rows = items.filter(function (it) {
+      if (it.score < state.min) return false;
+      if (state.status !== "all" && (it.status || "new") !== state.status) return false;
+      if (!q) return true;
+      var hay = [it.name, it.description, it.language || "", (it.topics || []).join(" ")]
+        .join(" ").toLowerCase();
+      return hay.indexOf(q) !== -1;
+    });
+    var key = state.sort;
+    rows.sort(function (a, b) {
+      if (key === "age_days") return (a.age_days || 0) - (b.age_days || 0);
+      return (b[key] || 0) - (a[key] || 0);
+    });
+    return rows;
+  }
+
+  function render() {
+    var rows = visible();
+    var board = document.getElementById("board");
+    var tableWrap = document.getElementById("tableWrap");
+    board.textContent = "";
+    tableWrap.textContent = "";
+    hideTip();
+
+    document.getElementById("count").textContent =
+      rows.length + " of " + items.length + " shown";
+
+    if (!rows.length) {
+      board.appendChild(el("p", "empty", "Nothing matches those filters."));
+      return;
+    }
+    if (state.view === "cards") {
+      rows.forEach(function (it, i) { board.appendChild(card(it, i + 1)); });
+    } else {
+      tableWrap.appendChild(table(rows));
+    }
+  }
+
+  function setView(v) {
+    state.view = v;
+    document.getElementById("viewCards").setAttribute("aria-pressed", String(v === "cards"));
+    document.getElementById("viewTable").setAttribute("aria-pressed", String(v === "table"));
+    document.getElementById("board").classList.toggle("hidden", v !== "cards");
+    document.getElementById("tableWrap").classList.toggle("hidden", v !== "table");
+    render();
+  }
+
+  function renderChips() {
+    var host = document.getElementById("statusChips");
+    var counts = { all: items.length };
+    items.forEach(function (it) {
+      var s = it.status || "new";
+      counts[s] = (counts[s] || 0) + 1;
+    });
+    [["all", "All"], ["new", "New"], ["accelerating", "Accelerating"],
+     ["steady", "Steady"], ["cooling", "Cooling"]].forEach(function (pair) {
+      if (pair[0] !== "all" && !counts[pair[0]]) return;
+      var b = el("button", null, pair[1] + " " + (counts[pair[0]] || 0));
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(state.status === pair[0]));
+      b.addEventListener("click", function () {
+        state.status = pair[0];
+        Array.prototype.forEach.call(host.children, function (c) {
+          c.setAttribute("aria-pressed", "false");
+        });
+        b.setAttribute("aria-pressed", "true");
+        render();
+      });
+      host.appendChild(b);
+    });
+  }
+
+  function renderGone() {
+    var gone = DATA.departed || [];
+    if (!gone.length) return;
+    var host = document.getElementById("goneSection");
+    host.appendChild(el("div", "section-title", "Dropped off the board"));
+    var box = el("section", "panel");
+    box.appendChild(el("p", "filter-label",
+      "On the previous scan, gone from this one. A closing window is a signal too."));
+    var list = el("div", "gone");
+    gone.forEach(function (g) {
+      var a = el("a", null, g.name + " \\u00B7 was " + g.score + "/100");
+      a.href = g.url; a.rel = "noopener";
+      list.appendChild(a);
+    });
+    box.appendChild(list);
+    host.appendChild(box);
+  }
+
+  /* ---------- boot ---------- */
+  document.getElementById("stamp").textContent =
+    "Scan " + DATA.date + " \\u00B7 rebuilds daily";
+  document.getElementById("archived").textContent =
+    (summary.scans_archived || 1) + " scans archived.";
+
+  document.getElementById("q").addEventListener("input", function (e) {
+    state.q = e.target.value; render();
+  });
+  document.getElementById("minScore").addEventListener("change", function (e) {
+    state.min = Number(e.target.value); render();
+  });
+  document.getElementById("sort").addEventListener("change", function (e) {
+    state.sort = e.target.value; render();
+  });
+  document.getElementById("viewCards").addEventListener("click", function () { setView("cards"); });
+  document.getElementById("viewTable").addEventListener("click", function () { setView("table"); });
+  document.getElementById("theme").addEventListener("click", function () {
+    var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var current = document.documentElement.getAttribute("data-theme")
+      || (systemDark ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+  });
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  renderFocus();
+  renderTiles();
+  renderLoop();
+  renderChips();
+  renderGone();
+  render();
+})();
+</script>
+</body>
+</html>
+"""
+
+
+def embed_json(payload):
+    """Inline JSON safely inside a <script> block."""
+    return json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")
+
+
+def build_page(data, cfg):
+    title = cfg.get("site_title", "Opportunity Radar")
+    tagline = cfg.get(
+        "tagline",
+        "Fast-rising GitHub projects, scored for the money-making gaps around them.",
+    )
+
+    cta = []
+    if cfg.get("newsletter_url"):
+        cta.append(
+            "<a href='"
+            + html.escape(cfg["newsletter_url"], quote=True)
+            + "'>Get this daily by email</a>"
+        )
+    if cfg.get("premium_url"):
+        cta.append(
+            "<a href='"
+            + html.escape(cfg["premium_url"], quote=True)
+            + "'>Full deep-dive report</a>"
+        )
+    if cfg.get("sponsor_email"):
+        cta.append(
+            "<a href='mailto:"
+            + html.escape(cfg["sponsor_email"], quote=True)
+            + "'>Sponsor this radar</a>"
+        )
+
+    return (
+        TEMPLATE.replace("__TITLE__", html.escape(title))
+        .replace("__TAGLINE__", html.escape(tagline))
+        .replace("__CTA__", "".join(cta))
+        .replace("__DATA__", embed_json(data))
+    )
+
+
+def main():
+    with open("scan_data.json") as fh:
+        data = json.load(fh)
+    cfg = {}
+    if os.path.exists("config.json"):
+        with open("config.json") as fh:
+            cfg = json.load(fh)
+
+    os.makedirs("docs", exist_ok=True)
+    with open("docs/index.html", "w") as fh:
+        fh.write(build_page(data, cfg))
+    print("Site generated: docs/index.html (" + str(len(data.get("items", []))) + " items)")
+
+
+if __name__ == "__main__":
+    main()
