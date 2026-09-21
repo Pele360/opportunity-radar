@@ -1,14 +1,14 @@
 {
-  "date": "2026-09-14",
+  "date": "2026-09-21",
   "items": [
     {
       "name": "guillaumemeyer/watermarks-remover",
       "score": 90,
-      "stars": 21978,
-      "velocity": 666.0,
+      "stars": 22491,
+      "velocity": 562.3,
       "description": "A privacy-first app that strips AI watermarks from content you own.",
       "reasons": [
-        "explosive growth (666 stars/day)",
+        "explosive growth (562 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "very new (early-mover window)"
       ],
@@ -19,14 +19,32 @@
       "found_via": "AI repos, last 90 days"
     },
     {
-      "name": "larashero3-dotcom/lieflat-charts",
+      "name": "hypit-ai/hypit",
       "score": 90,
-      "stars": 5384,
-      "velocity": 89.7,
-      "description": "Data visualization Skill for AI Agents, turning data into polished, interactive HTML charts. \u9762\u5411 AI Agents \u7684\u6570\u636e\u53ef\u89c6\u5316 Skill\uff0c\u5c06\u6570\u636e\u5feb\u901f\u751f\u6210\u7cbe\u81f4\u3001\u53ef\u4ea4\u4e92\u7684 HTML \u56fe\u8868\u3002",
+      "stars": 12463,
+      "velocity": 235.2,
+      "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
       "reasons": [
-        "very fast growth (90 stars/day)",
-        "rich ecosystem angle (agent, skill, claude)",
+        "explosive growth (235 stars/day)",
+        "rich ecosystem angle (agent, workflow, automation, llm)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
+      ],
+      "url": "https://github.com/hypit-ai/hypit",
+      "found_via": "AI repos, last 90 days"
+    },
+    {
+      "name": "tamaratran/fast-jev-compaction",
+      "score": 85,
+      "stars": 5820,
+      "velocity": 1455.0,
+      "description": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbati",
+      "reasons": [
+        "explosive growth (1455 stars/day)",
+        "ecosystem angle (claude, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
       ],
@@ -34,53 +52,17 @@
         "Sell config/skill packs or setup guides on Gumroad",
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
-      "url": "https://github.com/larashero3-dotcom/lieflat-charts",
-      "found_via": "Agent/MCP ecosystem"
-    },
-    {
-      "name": "yanliudesign/mono-color-skill",
-      "score": 85,
-      "stars": 3067,
-      "velocity": 118.0,
-      "description": "One-ink editorial print image skill \u2014 warm paper, halftone photography, active negative space, and restrained typography.",
-      "reasons": [
-        "very fast growth (118 stars/day)",
-        "rich ecosystem angle (agent, skill, claude)",
-        "very new (early-mover window)",
-        "no official site yet (gap for guides/tools)"
-      ],
-      "ideas": [
-        "Create a paid course/guide or complementary tool"
-      ],
-      "url": "https://github.com/yanliudesign/mono-color-skill",
+      "url": "https://github.com/tamaratran/fast-jev-compaction",
       "found_via": "New repos, last 30 days"
     },
     {
-      "name": "Tiger3807861189/J-Space-Cognition-Suite",
-      "score": 85,
-      "stars": 3010,
-      "velocity": 55.7,
-      "description": "J-Space Cognition Suite \u2014 a model-agnostic inference-time control suite for deep reasoning, long-horizon work, verification, and recovery. Based on Anthropic's J-space global workspace research.",
-      "reasons": [
-        "very fast growth (56 stars/day)",
-        "rich ecosystem angle (agent, skill, claude, plugin)",
-        "very new (early-mover window)",
-        "no official site yet (gap for guides/tools)"
-      ],
-      "ideas": [
-        "Create a paid course/guide or complementary tool"
-      ],
-      "url": "https://github.com/Tiger3807861189/J-Space-Cognition-Suite",
-      "found_via": "AI repos, last 90 days"
-    },
-    {
       "name": "XiaoDuoYa/codex-with-chatgpt",
-      "score": 80,
-      "stars": 4283,
-      "velocity": 251.9,
+      "score": 85,
+      "stars": 5781,
+      "velocity": 240.9,
       "description": "ChatGPT thinks. Codex works. Use ChatGPT as the planning brain while keeping the Codex harness.",
       "reasons": [
-        "explosive growth (252 stars/day)",
+        "explosive growth (241 stars/day)",
         "ecosystem angle (agent, mcp)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -94,11 +76,11 @@
     {
       "name": "genspark-ai/genoffice",
       "score": 80,
-      "stars": 6740,
-      "velocity": 149.8,
+      "stars": 7408,
+      "velocity": 142.5,
       "description": "Free, open-source AI Office suite: Docs, Sheets, Slides, PDF, Markdown and HTML editors with a built-in AI agent, plus a `genoffice` CLI and agent skill so Claude Code, Codex and Cursor can create and",
       "reasons": [
-        "very fast growth (150 stars/day)",
+        "very fast growth (142 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "very new (early-mover window)"
       ],
@@ -110,50 +92,49 @@
       "found_via": "AI repos, last 90 days"
     },
     {
-      "name": "Vincentwei1021/video-shotcraft",
-      "score": 80,
-      "stars": 8526,
-      "velocity": 149.6,
-      "description": "AI video skill for Claude Code & Codex \u2014 cinematic product videos with Remotion: 152 shot recipe cards, 209 motion previews, a production-ready template",
-      "reasons": [
-        "very fast growth (150 stars/day)",
-        "rich ecosystem angle (agent, skill, claude, template)",
-        "very new (early-mover window)"
-      ],
-      "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork",
-        "Build premium template variants"
-      ],
-      "url": "https://github.com/Vincentwei1021/video-shotcraft",
-      "found_via": "Agent/MCP ecosystem"
-    },
-    {
-      "name": "CopilotKit/OpenBot",
+      "name": "browser-use/jev-ultrafast",
       "score": 75,
-      "stars": 4876,
-      "velocity": 174.1,
-      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "stars": 14631,
+      "velocity": 3657.8,
+      "description": "Fastest and cheapest web agent",
       "reasons": [
-        "very fast growth (174 stars/day)",
-        "rich ecosystem angle (agent, mcp, automation)",
+        "explosive growth (3658 stars/day)",
+        "ecosystem angle (agent)",
         "very new (early-mover window)"
       ],
       "ideas": [
         "Sell config/skill packs or setup guides on Gumroad",
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
-      "url": "https://github.com/CopilotKit/OpenBot",
+      "url": "https://github.com/browser-use/jev-ultrafast",
+      "found_via": "New repos, last 30 days"
+    },
+    {
+      "name": "zai-org/ZCode",
+      "score": 75,
+      "stars": 5196,
+      "velocity": 5196.0,
+      "description": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
+      "reasons": [
+        "explosive growth (5196 stars/day)",
+        "ecosystem angle (agent)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
+      ],
+      "url": "https://github.com/zai-org/ZCode",
       "found_via": "New repos, last 30 days"
     },
     {
       "name": "yc-software/qm",
       "score": 75,
-      "stars": 14947,
-      "velocity": 324.9,
+      "stars": 15186,
+      "velocity": 286.5,
       "description": "Multiplayer agent harness for work.",
       "reasons": [
-        "explosive growth (325 stars/day)",
+        "explosive growth (287 stars/day)",
         "ecosystem angle (agent, assistant)",
         "very new (early-mover window)"
       ],
@@ -167,11 +148,11 @@
     {
       "name": "fuxicodex/Fuxi",
       "score": 75,
-      "stars": 3409,
-      "velocity": 83.1,
+      "stars": 3353,
+      "velocity": 69.9,
       "description": "FuXi is a fast, self-contained AI coding agent that lives in your terminal \u2014 edit code, run commands, and drive tools, with cost-aware routing across LLM providers.",
       "reasons": [
-        "very fast growth (83 stars/day)",
+        "very fast growth (70 stars/day)",
         "rich ecosystem angle (agent, mcp, llm, assistant)",
         "very new (early-mover window)"
       ],
@@ -185,11 +166,11 @@
     {
       "name": "xai-org/grok-build",
       "score": 75,
-      "stars": 26737,
-      "velocity": 438.3,
+      "stars": 26957,
+      "velocity": 396.4,
       "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
       "reasons": [
-        "explosive growth (438 stars/day)",
+        "explosive growth (396 stars/day)",
         "ecosystem angle (agent)",
         "no official site yet (gap for guides/tools)"
       ],
@@ -203,11 +184,11 @@
     {
       "name": "trycompai/crm",
       "score": 75,
-      "stars": 10407,
-      "velocity": 236.5,
+      "stars": 10691,
+      "velocity": 209.6,
       "description": "Comp AI CRM is an open source, CRM designed for AI agents. Agentic-first CRM.",
       "reasons": [
-        "explosive growth (237 stars/day)",
+        "explosive growth (210 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)"
       ],
@@ -217,6 +198,23 @@
       ],
       "url": "https://github.com/trycompai/crm",
       "found_via": "Agent/MCP ecosystem"
+    },
+    {
+      "name": "NandhaKishorM/laya",
+      "score": 70,
+      "stars": 8182,
+      "velocity": 2727.3,
+      "description": "No description",
+      "reasons": [
+        "explosive growth (2727 stars/day)",
+        "very new (early-mover window)",
+        "no official site yet (gap for guides/tools)"
+      ],
+      "ideas": [
+        "Create a paid course/guide or complementary tool"
+      ],
+      "url": "https://github.com/NandhaKishorM/laya",
+      "found_via": "New repos, last 30 days"
     }
   ]
 }
