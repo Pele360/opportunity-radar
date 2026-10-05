@@ -1,14 +1,32 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-10-05",
   "items": [
+    {
+      "name": "yetone/magpie",
+      "score": 90,
+      "stars": 5100,
+      "velocity": 425.0,
+      "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
+      "reasons": [
+        "explosive growth (425 stars/day)",
+        "rich ecosystem angle (agent, claude, llm)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
+      ],
+      "url": "https://github.com/yetone/magpie",
+      "found_via": "New repos, last 30 days"
+    },
     {
       "name": "guillaumemeyer/watermarks-remover",
       "score": 90,
-      "stars": 22998,
-      "velocity": 489.3,
+      "stars": 23371,
+      "velocity": 432.8,
       "description": "A privacy-first app that strips AI watermarks from content you own.",
       "reasons": [
-        "explosive growth (489 stars/day)",
+        "explosive growth (433 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "very new (early-mover window)"
       ],
@@ -19,31 +37,13 @@
       "found_via": "AI repos, last 90 days"
     },
     {
-      "name": "hypit-ai/hypit",
-      "score": 90,
-      "stars": 17155,
-      "velocity": 285.9,
-      "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
-      "reasons": [
-        "explosive growth (286 stars/day)",
-        "rich ecosystem angle (agent, workflow, automation, llm)",
-        "very new (early-mover window)"
-      ],
-      "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
-      ],
-      "url": "https://github.com/hypit-ai/hypit",
-      "found_via": "AI repos, last 90 days"
-    },
-    {
       "name": "tamaratran/fast-jev-compaction",
       "score": 85,
-      "stars": 7088,
-      "velocity": 644.4,
+      "stars": 7411,
+      "velocity": 411.7,
       "description": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbati",
       "reasons": [
-        "explosive growth (644 stars/day)",
+        "explosive growth (412 stars/day)",
         "ecosystem angle (claude, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -56,49 +56,48 @@
       "found_via": "New repos, last 30 days"
     },
     {
-      "name": "jev-chat/jev-chat-jarvis",
-      "score": 85,
-      "stars": 6897,
-      "velocity": 985.3,
-      "description": "\u88c5\u5728\u624b\u673a\u4e0a\u7684\u5bf9\u8bdd\u526f\u9a7e\uff1a\u5728 QQ / X / \u98de\u4e66\u91cc\u8bfb\u61c2\u5bf9\u65b9\u3001\u7ed9\u51fa\u5019\u9009\u56de\u590d\u3001\u4e00\u952e\u586b\u5165\u8f93\u5165\u6846\uff0c\u53d1\u4e0d\u53d1\u7531\u4f60\u3002\u975e\u4fb5\u5165\uff0c\u53ea\u8bfb\u5c4f\u5e55\uff0c\u4e0d hook \u4e0d\u6539\u5305\u3002",
+      "name": "hypit-ai/hypit",
+      "score": 80,
+      "stars": 19417,
+      "velocity": 289.8,
+      "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
       "reasons": [
-        "explosive growth (985 stars/day)",
-        "ecosystem angle (llm, assistant)",
-        "very new (early-mover window)",
-        "no official site yet (gap for guides/tools)"
+        "explosive growth (290 stars/day)",
+        "rich ecosystem angle (agent, workflow, automation, llm)"
       ],
       "ideas": [
-        "Create a paid course/guide or complementary tool"
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
       ],
-      "url": "https://github.com/jev-chat/jev-chat-jarvis",
-      "found_via": "New repos, last 30 days"
+      "url": "https://github.com/hypit-ai/hypit",
+      "found_via": "AI repos, last 90 days"
     },
     {
-      "name": "genspark-ai/genoffice",
+      "name": "CopilotKit/OpenBot",
       "score": 80,
-      "stars": 8057,
-      "velocity": 136.6,
-      "description": "Free, open-source AI Office suite: Docs, Sheets, Slides, PDF, Markdown and HTML editors with a built-in AI agent, plus a `genoffice` CLI and agent skill so Claude Code, Codex and Cursor can create and",
+      "stars": 6071,
+      "velocity": 123.9,
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
       "reasons": [
-        "very fast growth (137 stars/day)",
-        "rich ecosystem angle (agent, skill, claude)",
+        "very fast growth (124 stars/day)",
+        "rich ecosystem angle (agent, mcp, automation)",
         "very new (early-mover window)"
       ],
       "ideas": [
         "Sell config/skill packs or setup guides on Gumroad",
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
-      "url": "https://github.com/genspark-ai/genoffice",
-      "found_via": "AI repos, last 90 days"
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "found_via": "Agent/MCP ecosystem"
     },
     {
       "name": "browser-use/jev-ultrafast",
       "score": 75,
-      "stars": 21063,
-      "velocity": 1914.8,
+      "stars": 22075,
+      "velocity": 1226.4,
       "description": "Fastest and cheapest web agent",
       "reasons": [
-        "explosive growth (1915 stars/day)",
+        "explosive growth (1226 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)"
       ],
@@ -112,11 +111,11 @@
     {
       "name": "zai-org/ZCode",
       "score": 75,
-      "stars": 7026,
-      "velocity": 878.2,
+      "stars": 7431,
+      "velocity": 495.4,
       "description": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
       "reasons": [
-        "explosive growth (878 stars/day)",
+        "explosive growth (495 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)"
       ],
@@ -128,67 +127,47 @@
       "found_via": "New repos, last 30 days"
     },
     {
-      "name": "Human-Agent-Society/reef",
+      "name": "jev-chat/jev-chat-jarvis",
       "score": 75,
-      "stars": 6872,
-      "velocity": 245.4,
-      "description": "Infrastructure for continually self\u2011improving agents",
+      "stars": 7355,
+      "velocity": 525.4,
+      "description": "\u88c5\u5728\u624b\u673a\u4e0a\u7684\u5bf9\u8bdd\u526f\u9a7e\uff1a\u5728 QQ / X / \u98de\u4e66\u91cc\u8bfb\u61c2\u5bf9\u65b9\u3001\u7ed9\u51fa\u5019\u9009\u56de\u590d\u3001\u4e00\u952e\u586b\u5165\u8f93\u5165\u6846\uff0c\u53d1\u4e0d\u53d1\u7531\u4f60\u3002\u975e\u4fb5\u5165\uff0c\u53ea\u8bfb\u5c4f\u5e55\uff0c\u4e0d hook \u4e0d\u6539\u5305\u3002",
       "reasons": [
-        "explosive growth (245 stars/day)",
-        "ecosystem angle (agent, llm)",
+        "explosive growth (525 stars/day)",
+        "ecosystem angle (llm, assistant)",
         "very new (early-mover window)"
       ],
       "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
+        "Create a paid course/guide or complementary tool"
       ],
-      "url": "https://github.com/Human-Agent-Society/reef",
+      "url": "https://github.com/jev-chat/jev-chat-jarvis",
       "found_via": "New repos, last 30 days"
     },
     {
-      "name": "yc-software/qm",
+      "name": "KKKKhazix/AIHOT",
       "score": 75,
-      "stars": 15273,
-      "velocity": 254.6,
-      "description": "Multiplayer agent harness for work.",
+      "stars": 5967,
+      "velocity": 994.5,
+      "description": "\u4e00\u4e2a\u81ea\u5df1\u627e\u70ed\u70b9\u3001\u81ea\u5df1\u5199\u65e5\u62a5\u7684\u7f51\u7ad9\u6846\u67b6\u3002\u628a\u4fe1\u6e90\u548c\u7cbe\u9009\u6807\u51c6\u6362\u6210\u4f60\u7684\uff0c\u5b83\u5c31\u662f\u4f60\u7684\u884c\u4e1a\u70ed\u70b9\u7ad9\u3002",
       "reasons": [
-        "explosive growth (255 stars/day)",
-        "ecosystem angle (agent, assistant)",
+        "explosive growth (994 stars/day)",
+        "ecosystem angle (mcp, llm)",
         "very new (early-mover window)"
       ],
       "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
+        "Create a paid course/guide or complementary tool"
       ],
-      "url": "https://github.com/yc-software/qm",
-      "found_via": "AI repos, last 90 days"
-    },
-    {
-      "name": "fuxicodex/Fuxi",
-      "score": 75,
-      "stars": 3363,
-      "velocity": 61.1,
-      "description": "FuXi is a fast, self-contained AI coding agent that lives in your terminal \u2014 edit code, run commands, and drive tools, with cost-aware routing across LLM providers.",
-      "reasons": [
-        "very fast growth (61 stars/day)",
-        "rich ecosystem angle (agent, mcp, llm, assistant)",
-        "very new (early-mover window)"
-      ],
-      "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
-      ],
-      "url": "https://github.com/fuxicodex/Fuxi",
-      "found_via": "AI repos, last 90 days"
+      "url": "https://github.com/KKKKhazix/AIHOT",
+      "found_via": "New repos, last 30 days"
     },
     {
       "name": "xai-org/grok-build",
       "score": 75,
-      "stars": 27135,
-      "velocity": 361.8,
+      "stars": 27223,
+      "velocity": 332.0,
       "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
       "reasons": [
-        "explosive growth (362 stars/day)",
+        "explosive growth (332 stars/day)",
         "ecosystem angle (agent)",
         "no official site yet (gap for guides/tools)"
       ],
@@ -200,20 +179,38 @@
       "found_via": "Agent/MCP ecosystem"
     },
     {
-      "name": "jaredpalmer/kev",
-      "score": 70,
-      "stars": 7599,
-      "velocity": 759.9,
-      "description": "Jev-like family of decision models built on top of Qwen3.5/3.8 you can train and run on your own",
+      "name": "Human-Agent-Society/reef",
+      "score": 75,
+      "stars": 7473,
+      "velocity": 213.5,
+      "description": "Infrastructure for continually self\u2011improving agents",
       "reasons": [
-        "explosive growth (760 stars/day)",
+        "explosive growth (214 stars/day)",
+        "ecosystem angle (agent, llm)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
+      ],
+      "url": "https://github.com/Human-Agent-Society/reef",
+      "found_via": "Agent/MCP ecosystem"
+    },
+    {
+      "name": "Niko1221/Strata",
+      "score": 70,
+      "stars": 13155,
+      "velocity": 1315.5,
+      "description": "Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input.",
+      "reasons": [
+        "explosive growth (1316 stars/day)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
       ],
       "ideas": [
         "Create a paid course/guide or complementary tool"
       ],
-      "url": "https://github.com/jaredpalmer/kev",
+      "url": "https://github.com/Niko1221/Strata",
       "found_via": "New repos, last 30 days"
     }
   ]
