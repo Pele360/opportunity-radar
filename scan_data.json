@@ -1,32 +1,14 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-26",
   "items": [
-    {
-      "name": "Ebony-Vinyl/dsh-our-free-model",
-      "score": 100,
-      "stars": 27219,
-      "velocity": 1134.1,
-      "description": "\u5728 dsh \u91cc\u88c5\u4e0a\u8fd9\u4e2a\u63d2\u4ef6\u5373\u53ef\uff0c\u65e0\u9700\u767b\u5f55\u3001\u6ce8\u518c\u6216\u586b API Key\uff0c\u5c31\u80fd\u4f7f\u7528\u5305\u62ec DeepSeek V4.1 Flash\u3001Kimi K3 \u5728\u5185\u7684\u524d\u6cbf\u6a21\u578b\u2014\u2014\u5b8c\u5168\u514d\u8d39\uff0c\u4e0d\u9650\u91cf\u3002 All you do is install this plugin in dsh: no login, no sign-up, no API key \u2014 the frontier models are just there,",
-      "reasons": [
-        "explosive growth (1134 stars/day)",
-        "rich ecosystem angle (agent, llm, plugin)",
-        "very new (early-mover window)",
-        "no official site yet (gap for guides/tools)"
-      ],
-      "ideas": [
-        "Create a paid course/guide or complementary tool"
-      ],
-      "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
-      "found_via": "New repos, last 30 days"
-    },
     {
       "name": "rehan-remade/universal-modder",
       "score": 100,
-      "stars": 8422,
-      "velocity": 443.3,
+      "stars": 8998,
+      "velocity": 346.1,
       "description": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
       "reasons": [
-        "explosive growth (443 stars/day)",
+        "explosive growth (346 stars/day)",
         "rich ecosystem angle (skill, mcp, claude, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -41,11 +23,11 @@
     {
       "name": "yetone/magpie",
       "score": 90,
-      "stars": 16830,
-      "velocity": 673.2,
+      "stars": 22364,
+      "velocity": 698.9,
       "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "reasons": [
-        "explosive growth (673 stars/day)",
+        "explosive growth (699 stars/day)",
         "rich ecosystem angle (agent, claude, llm)",
         "very new (early-mover window)"
       ],
@@ -54,32 +36,34 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/yetone/magpie",
-      "found_via": "New repos, last 30 days"
+      "found_via": "Agent/MCP ecosystem"
     },
     {
-      "name": "guillaumemeyer/watermarks-remover",
-      "score": 80,
-      "stars": 24434,
-      "velocity": 359.3,
-      "description": "A privacy-first app that strips AI watermarks from content you own.",
+      "name": "deepseek-ai/DeepInfer",
+      "score": 85,
+      "stars": 22881,
+      "velocity": 2288.1,
+      "description": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
       "reasons": [
-        "explosive growth (359 stars/day)",
-        "rich ecosystem angle (agent, skill, claude)"
+        "explosive growth (2288 stars/day)",
+        "ecosystem angle (framework)",
+        "very new (early-mover window)",
+        "no official site yet (gap for guides/tools)"
       ],
       "ideas": [
         "Create a paid course/guide or complementary tool"
       ],
-      "url": "https://github.com/guillaumemeyer/watermarks-remover",
-      "found_via": "AI repos, last 90 days"
+      "url": "https://github.com/deepseek-ai/DeepInfer",
+      "found_via": "New repos, last 30 days"
     },
     {
       "name": "hypit-ai/hypit",
       "score": 80,
-      "stars": 23874,
-      "velocity": 294.7,
+      "stars": 25807,
+      "velocity": 293.3,
       "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
       "reasons": [
-        "explosive growth (295 stars/day)",
+        "explosive growth (293 stars/day)",
         "rich ecosystem angle (agent, workflow, automation, llm)"
       ],
       "ideas": [
@@ -90,49 +74,64 @@
       "found_via": "AI repos, last 90 days"
     },
     {
-      "name": "LosaLosSantos/aurelio-finance",
+      "name": "guillaumemeyer/watermarks-remover",
       "score": 80,
-      "stars": 3972,
-      "velocity": 331.0,
-      "description": "Open-source personal finance app with an AI financial advisor: track your net worth, investments, ETFs, cash and debts on your own computer.",
+      "stars": 24957,
+      "velocity": 332.8,
+      "description": "A privacy-first app that strips AI watermarks from content you own.",
       "reasons": [
-        "explosive growth (331 stars/day)",
-        "ecosystem angle (llm)",
-        "very new (early-mover window)",
-        "no official site yet (gap for guides/tools)"
+        "explosive growth (333 stars/day)",
+        "rich ecosystem angle (agent, skill, claude)"
       ],
       "ideas": [
         "Create a paid course/guide or complementary tool"
       ],
-      "url": "https://github.com/LosaLosSantos/aurelio-finance",
+      "url": "https://github.com/guillaumemeyer/watermarks-remover",
       "found_via": "AI repos, last 90 days"
     },
     {
-      "name": "miqdadbadjuber/anti-slop",
+      "name": "Ryze-AI-Adgent/open-seo-mcp-skills",
       "score": 80,
-      "stars": 6501,
-      "velocity": 89.1,
-      "description": "Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and code.",
+      "stars": 7386,
+      "velocity": 129.6,
+      "description": "Free SEO MCP server + open-source SEO and GEO skills for Claude: keyword research, rank tracking, audits, backlinks, AI visibility on your real GSC/GA4/ads data. claude mcp add ryze --transport http h",
       "reasons": [
-        "very fast growth (89 stars/day)",
-        "rich ecosystem angle (agent, skill, claude)",
-        "no official site yet (gap for guides/tools)"
+        "very fast growth (130 stars/day)",
+        "rich ecosystem angle (skill, mcp, claude, llm)",
+        "very new (early-mover window)"
       ],
       "ideas": [
         "Sell config/skill packs or setup guides on Gumroad",
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
-      "url": "https://github.com/miqdadbadjuber/anti-slop",
+      "url": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
       "found_via": "Agent/MCP ecosystem"
+    },
+    {
+      "name": "Gathin23/cleanyourtv",
+      "score": 75,
+      "stars": 37989,
+      "velocity": 4221.0,
+      "description": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
+      "reasons": [
+        "explosive growth (4221 stars/day)",
+        "ecosystem angle (claude)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Create a paid course/guide or complementary tool"
+      ],
+      "url": "https://github.com/Gathin23/cleanyourtv",
+      "found_via": "New repos, last 30 days"
     },
     {
       "name": "wheresryan22/anatomy",
       "score": 75,
-      "stars": 16629,
-      "velocity": 1511.7,
+      "stars": 20923,
+      "velocity": 1162.4,
       "description": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.",
       "reasons": [
-        "explosive growth (1512 stars/day)",
+        "explosive growth (1162 stars/day)",
         "ecosystem angle (agent, skill)",
         "very new (early-mover window)"
       ],
@@ -144,13 +143,49 @@
       "found_via": "New repos, last 30 days"
     },
     {
+      "name": "yihui-dev/awesome-opus5-5-videos",
+      "score": 75,
+      "stars": 11382,
+      "velocity": 392.5,
+      "description": "A growing collection of viral videos made with Claude Opus 5.5 and the prompts behind them. Watch each original next to a live remake on Skillry. Updated regularly.",
+      "reasons": [
+        "explosive growth (392 stars/day)",
+        "ecosystem angle (skill, claude)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
+      ],
+      "url": "https://github.com/yihui-dev/awesome-opus5-5-videos",
+      "found_via": "New repos, last 30 days"
+    },
+    {
+      "name": "tangency-labs/solidcraft",
+      "score": 75,
+      "stars": 10688,
+      "velocity": 593.8,
+      "description": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
+      "reasons": [
+        "explosive growth (594 stars/day)",
+        "ecosystem angle (mcp, automation)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
+      ],
+      "url": "https://github.com/tangency-labs/solidcraft",
+      "found_via": "New repos, last 30 days"
+    },
+    {
       "name": "KKKKhazix/AIHOT",
       "score": 75,
-      "stars": 8076,
-      "velocity": 403.8,
+      "stars": 8665,
+      "velocity": 320.9,
       "description": "\u4e00\u4e2a\u81ea\u5df1\u627e\u70ed\u70b9\u3001\u81ea\u5df1\u5199\u65e5\u62a5\u7684\u7f51\u7ad9\u6846\u67b6\u3002\u628a\u4fe1\u6e90\u548c\u7cbe\u9009\u6807\u51c6\u6362\u6210\u4f60\u7684\uff0c\u5b83\u5c31\u662f\u4f60\u7684\u884c\u4e1a\u70ed\u70b9\u7ad9\u3002",
       "reasons": [
-        "explosive growth (404 stars/day)",
+        "explosive growth (321 stars/day)",
         "ecosystem angle (mcp, llm)",
         "very new (early-mover window)"
       ],
@@ -163,11 +198,11 @@
     {
       "name": "browser-use/jev-ultrafast",
       "score": 75,
-      "stars": 23267,
-      "velocity": 727.1,
+      "stars": 23675,
+      "velocity": 607.1,
       "description": "Fastest and cheapest web agent",
       "reasons": [
-        "explosive growth (727 stars/day)",
+        "explosive growth (607 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)"
       ],
@@ -176,42 +211,6 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/browser-use/jev-ultrafast",
-      "found_via": "Agent/MCP ecosystem"
-    },
-    {
-      "name": "zai-org/ZCode",
-      "score": 75,
-      "stars": 7985,
-      "velocity": 275.3,
-      "description": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
-      "reasons": [
-        "explosive growth (275 stars/day)",
-        "ecosystem angle (agent)",
-        "very new (early-mover window)"
-      ],
-      "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
-      ],
-      "url": "https://github.com/zai-org/ZCode",
-      "found_via": "Agent/MCP ecosystem"
-    },
-    {
-      "name": "tangency-labs/solidcraft",
-      "score": 75,
-      "stars": 6672,
-      "velocity": 606.5,
-      "description": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
-      "reasons": [
-        "explosive growth (607 stars/day)",
-        "ecosystem angle (mcp, automation)",
-        "very new (early-mover window)"
-      ],
-      "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
-      ],
-      "url": "https://github.com/tangency-labs/solidcraft",
       "found_via": "Agent/MCP ecosystem"
     }
   ]
