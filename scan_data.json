@@ -4,11 +4,11 @@
     {
       "name": "rehan-remade/universal-modder",
       "score": 100,
-      "stars": 9293,
-      "velocity": 299.8,
+      "stars": 9301,
+      "velocity": 290.7,
       "description": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
       "reasons": [
-        "explosive growth (300 stars/day)",
+        "explosive growth (291 stars/day)",
         "rich ecosystem angle (skill, mcp, claude, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -23,11 +23,11 @@
     {
       "name": "Jakeschincariol/replica-skill",
       "score": 90,
-      "stars": 6837,
-      "velocity": 244.2,
+      "stars": 6908,
+      "velocity": 238.2,
       "description": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
       "reasons": [
-        "explosive growth (244 stars/day)",
+        "explosive growth (238 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "very new (early-mover window)"
       ],
@@ -41,11 +41,11 @@
     {
       "name": "yetone/magpie",
       "score": 90,
-      "stars": 27075,
-      "velocity": 712.5,
+      "stars": 27425,
+      "velocity": 721.7,
       "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "reasons": [
-        "explosive growth (712 stars/day)",
+        "explosive growth (722 stars/day)",
         "rich ecosystem angle (agent, claude, llm)",
         "very new (early-mover window)"
       ],
@@ -59,11 +59,11 @@
     {
       "name": "deepseek-ai/DeepInfer",
       "score": 85,
-      "stars": 24685,
-      "velocity": 1645.7,
+      "stars": 24775,
+      "velocity": 1548.4,
       "description": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
       "reasons": [
-        "explosive growth (1646 stars/day)",
+        "explosive growth (1548 stars/day)",
         "ecosystem angle (framework)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -77,11 +77,11 @@
     {
       "name": "zhuyansen/new-term-radar",
       "score": 85,
-      "stars": 2003,
-      "velocity": 105.4,
+      "stars": 2013,
+      "velocity": 100.7,
       "description": "Daily radar for new AI terms: names of new models, products and repos, caught on X, Hugging Face, GitHub and sitemaps before keyword tools list them.",
       "reasons": [
-        "very fast growth (105 stars/day)",
+        "very fast growth (101 stars/day)",
         "rich ecosystem angle (agent, skill, mcp, claude)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -95,11 +95,11 @@
     {
       "name": "guillaumemeyer/watermarks-remover",
       "score": 80,
-      "stars": 25791,
-      "velocity": 318.4,
+      "stars": 25861,
+      "velocity": 319.3,
       "description": "A privacy-first app that strips AI watermarks from content you own.",
       "reasons": [
-        "explosive growth (318 stars/day)",
+        "explosive growth (319 stars/day)",
         "rich ecosystem angle (agent, skill, claude)"
       ],
       "ideas": [
@@ -111,11 +111,11 @@
     {
       "name": "google/elephant-goldfish-model",
       "score": 80,
-      "stars": 7962,
-      "velocity": 165.9,
+      "stars": 8534,
+      "velocity": 177.8,
       "description": "Open-source skills for designing and reviewing software with AI agents",
       "reasons": [
-        "very fast growth (166 stars/day)",
+        "very fast growth (178 stars/day)",
         "rich ecosystem angle (agent, skill, claude, llm)",
         "very new (early-mover window)"
       ],
@@ -129,11 +129,11 @@
     {
       "name": "Gathin23/cleanyourtv",
       "score": 75,
-      "stars": 48085,
-      "velocity": 3434.6,
+      "stars": 48602,
+      "velocity": 3240.1,
       "description": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
       "reasons": [
-        "explosive growth (3435 stars/day)",
+        "explosive growth (3240 stars/day)",
         "ecosystem angle (claude)",
         "very new (early-mover window)"
       ],
@@ -146,11 +146,11 @@
     {
       "name": "wheresryan22/anatomy",
       "score": 75,
-      "stars": 23423,
-      "velocity": 1018.4,
+      "stars": 23632,
+      "velocity": 984.7,
       "description": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.",
       "reasons": [
-        "explosive growth (1018 stars/day)",
+        "explosive growth (985 stars/day)",
         "ecosystem angle (agent, skill)",
         "very new (early-mover window)"
       ],
@@ -164,11 +164,11 @@
     {
       "name": "tangency-labs/solidcraft",
       "score": 75,
-      "stars": 12667,
-      "velocity": 527.8,
+      "stars": 12776,
+      "velocity": 532.3,
       "description": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
       "reasons": [
-        "explosive growth (528 stars/day)",
+        "explosive growth (532 stars/day)",
         "ecosystem angle (mcp, automation)",
         "very new (early-mover window)"
       ],
@@ -182,8 +182,8 @@
     {
       "name": "KKKKhazix/AIHOT",
       "score": 75,
-      "stars": 8994,
-      "velocity": 272.5,
+      "stars": 9009,
+      "velocity": 273.0,
       "description": "\u4e00\u4e2a\u81ea\u5df1\u627e\u70ed\u70b9\u3001\u81ea\u5df1\u5199\u65e5\u62a5\u7684\u7f51\u7ad9\u6846\u67b6\u3002\u628a\u4fe1\u6e90\u548c\u7cbe\u9009\u6807\u51c6\u6362\u6210\u4f60\u7684\uff0c\u5b83\u5c31\u662f\u4f60\u7684\u884c\u4e1a\u70ed\u70b9\u7ad9\u3002",
       "reasons": [
         "explosive growth (273 stars/day)",
@@ -199,11 +199,11 @@
     {
       "name": "browser-use/jev-ultrafast",
       "score": 75,
-      "stars": 23996,
-      "velocity": 533.2,
+      "stars": 24020,
+      "velocity": 533.8,
       "description": "Fastest and cheapest web agent",
       "reasons": [
-        "explosive growth (533 stars/day)",
+        "explosive growth (534 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)"
       ],
