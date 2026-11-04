@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "items": [
     {
       "name": "ccch1mneyyy/dsh-Go",
       "score": 100,
-      "stars": 7091,
-      "velocity": 787.9,
+      "stars": 9134,
+      "velocity": 913.4,
       "description": "dsh-go \u2014 DeepSeek Harness \u88c5\u8fdb\u53e3\u888b\uff1a\u624b\u673a\u672c\u673a\u8fd0\u884c\uff0c\u4e5f\u80fd\u9065\u63a7\u4f60\u7684\u7535\u8111\u3002",
       "reasons": [
-        "explosive growth (788 stars/day)",
+        "explosive growth (913 stars/day)",
         "rich ecosystem angle (agent, llm, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -22,11 +22,11 @@
     {
       "name": "rehan-remade/universal-modder",
       "score": 100,
-      "stars": 9369,
-      "velocity": 275.6,
+      "stars": 9416,
+      "velocity": 269.0,
       "description": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
       "reasons": [
-        "explosive growth (276 stars/day)",
+        "explosive growth (269 stars/day)",
         "rich ecosystem angle (skill, mcp, claude, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -41,11 +41,11 @@
     {
       "name": "yetone/magpie",
       "score": 90,
-      "stars": 28991,
-      "velocity": 724.8,
+      "stars": 29643,
+      "velocity": 723.0,
       "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "reasons": [
-        "explosive growth (725 stars/day)",
+        "explosive growth (723 stars/day)",
         "rich ecosystem angle (agent, claude, llm)",
         "very new (early-mover window)"
       ],
@@ -59,11 +59,11 @@
     {
       "name": "google/elephant-goldfish-model",
       "score": 90,
-      "stars": 11126,
-      "velocity": 222.5,
+      "stars": 11574,
+      "velocity": 226.9,
       "description": "Open-source skills for designing and reviewing software with AI agents",
       "reasons": [
-        "explosive growth (223 stars/day)",
+        "explosive growth (227 stars/day)",
         "rich ecosystem angle (agent, skill, claude, llm)",
         "very new (early-mover window)"
       ],
@@ -75,31 +75,13 @@
       "found_via": "Agent/MCP ecosystem"
     },
     {
-      "name": "Jakeschincariol/replica-skill",
-      "score": 90,
-      "stars": 7278,
-      "velocity": 234.8,
-      "description": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
-      "reasons": [
-        "explosive growth (235 stars/day)",
-        "rich ecosystem angle (agent, skill, claude)",
-        "very new (early-mover window)"
-      ],
-      "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
-      ],
-      "url": "https://github.com/Jakeschincariol/replica-skill",
-      "found_via": "Agent/MCP ecosystem"
-    },
-    {
       "name": "deepseek-ai/DeepInfer",
       "score": 85,
-      "stars": 25136,
-      "velocity": 1396.4,
+      "stars": 25356,
+      "velocity": 1334.5,
       "description": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
       "reasons": [
-        "explosive growth (1396 stars/day)",
+        "explosive growth (1335 stars/day)",
         "ecosystem angle (framework)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -113,11 +95,11 @@
     {
       "name": "deepseek-ai/dsh-superagent-prototype",
       "score": 85,
-      "stars": 16036,
-      "velocity": 5345.3,
+      "stars": 18357,
+      "velocity": 4589.2,
       "description": "Towards a More Autonomous Agent System",
       "reasons": [
-        "explosive growth (5345 stars/day)",
+        "explosive growth (4589 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -132,11 +114,11 @@
     {
       "name": "heydamir/unslop",
       "score": 85,
-      "stars": 7125,
-      "velocity": 1425.0,
+      "stars": 8258,
+      "velocity": 1376.3,
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
       "reasons": [
-        "explosive growth (1425 stars/day)",
+        "explosive growth (1376 stars/day)",
         "ecosystem angle (skill, claude)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -151,11 +133,11 @@
     {
       "name": "zhuyansen/new-term-radar",
       "score": 85,
-      "stars": 2068,
-      "velocity": 94.0,
+      "stars": 2096,
+      "velocity": 91.1,
       "description": "Daily radar for new AI terms: names of new models, products and repos, caught on X, Hugging Face, GitHub and sitemaps before keyword tools list them.",
       "reasons": [
-        "very fast growth (94 stars/day)",
+        "very fast growth (91 stars/day)",
         "rich ecosystem angle (agent, skill, mcp, claude)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -169,11 +151,11 @@
     {
       "name": "guillaumemeyer/watermarks-remover",
       "score": 80,
-      "stars": 26096,
-      "velocity": 314.4,
+      "stars": 26254,
+      "velocity": 312.5,
       "description": "A privacy-first app that strips AI watermarks from content you own.",
       "reasons": [
-        "explosive growth (314 stars/day)",
+        "explosive growth (313 stars/day)",
         "rich ecosystem angle (agent, skill, claude)"
       ],
       "ideas": [
@@ -185,11 +167,11 @@
     {
       "name": "Gathin23/cleanyourtv",
       "score": 75,
-      "stars": 51055,
-      "velocity": 3003.2,
+      "stars": 51833,
+      "velocity": 2879.6,
       "description": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
       "reasons": [
-        "explosive growth (3003 stars/day)",
+        "explosive growth (2880 stars/day)",
         "ecosystem angle (claude)",
         "very new (early-mover window)"
       ],
@@ -202,11 +184,11 @@
     {
       "name": "wheresryan22/anatomy",
       "score": 75,
-      "stars": 24347,
-      "velocity": 936.4,
+      "stars": 24765,
+      "velocity": 917.2,
       "description": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.",
       "reasons": [
-        "explosive growth (936 stars/day)",
+        "explosive growth (917 stars/day)",
         "ecosystem angle (agent, skill)",
         "very new (early-mover window)"
       ],
@@ -215,6 +197,24 @@
         "Offer paid setup/integration service on Fiverr/Upwork"
       ],
       "url": "https://github.com/wheresryan22/anatomy",
+      "found_via": "New repos, last 30 days"
+    },
+    {
+      "name": "tangency-labs/solidcraft",
+      "score": 75,
+      "stars": 13564,
+      "velocity": 502.4,
+      "description": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
+      "reasons": [
+        "explosive growth (502 stars/day)",
+        "ecosystem angle (mcp, automation)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Sell config/skill packs or setup guides on Gumroad",
+        "Offer paid setup/integration service on Fiverr/Upwork"
+      ],
+      "url": "https://github.com/tangency-labs/solidcraft",
       "found_via": "New repos, last 30 days"
     }
   ]
