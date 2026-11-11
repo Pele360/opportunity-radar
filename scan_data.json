@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "items": [
     {
       "name": "ccch1mneyyy/dsh-Go",
       "score": 100,
-      "stars": 18526,
-      "velocity": 1157.9,
+      "stars": 19557,
+      "velocity": 1150.4,
       "description": "dsh-go \u2014 DeepSeek Harness \u88c5\u8fdb\u53e3\u888b\uff1a\u624b\u673a\u672c\u673a\u8fd0\u884c\uff0c\u4e5f\u80fd\u9065\u63a7\u4f60\u7684\u7535\u8111\u3002",
       "reasons": [
-        "explosive growth (1158 stars/day)",
+        "explosive growth (1150 stars/day)",
         "rich ecosystem angle (agent, llm, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -22,11 +22,11 @@
     {
       "name": "rehan-remade/universal-modder",
       "score": 100,
-      "stars": 9584,
-      "velocity": 233.8,
+      "stars": 9612,
+      "velocity": 228.9,
       "description": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
       "reasons": [
-        "explosive growth (234 stars/day)",
+        "explosive growth (229 stars/day)",
         "rich ecosystem angle (skill, mcp, claude, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -41,11 +41,11 @@
     {
       "name": "wangzan101/Mika",
       "score": 90,
-      "stars": 8028,
-      "velocity": 669.0,
+      "stars": 8217,
+      "velocity": 632.1,
       "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
       "reasons": [
-        "explosive growth (669 stars/day)",
+        "explosive growth (632 stars/day)",
         "rich ecosystem angle (agent, automation, llm)",
         "very new (early-mover window)"
       ],
@@ -59,11 +59,11 @@
     {
       "name": "yetone/magpie",
       "score": 90,
-      "stars": 33782,
-      "velocity": 718.8,
+      "stars": 34601,
+      "velocity": 720.9,
       "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "reasons": [
-        "explosive growth (719 stars/day)",
+        "explosive growth (721 stars/day)",
         "rich ecosystem angle (agent, claude, llm)",
         "very new (early-mover window)"
       ],
@@ -77,11 +77,11 @@
     {
       "name": "google/elephant-goldfish-model",
       "score": 90,
-      "stars": 17024,
-      "velocity": 298.7,
+      "stars": 17476,
+      "velocity": 301.3,
       "description": "Open-source plugin for designing and reviewing software with agents",
       "reasons": [
-        "explosive growth (299 stars/day)",
+        "explosive growth (301 stars/day)",
         "rich ecosystem angle (agent, skill, claude, llm)",
         "very new (early-mover window)"
       ],
@@ -95,11 +95,11 @@
     {
       "name": "Jakeschincariol/replica-skill",
       "score": 90,
-      "stars": 8740,
-      "velocity": 230.0,
+      "stars": 8895,
+      "velocity": 228.1,
       "description": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
       "reasons": [
-        "explosive growth (230 stars/day)",
+        "explosive growth (228 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "very new (early-mover window)"
       ],
@@ -113,11 +113,11 @@
     {
       "name": "deepseek-ai/DeepInfer",
       "score": 85,
-      "stars": 25793,
-      "velocity": 1031.7,
+      "stars": 25854,
+      "velocity": 994.4,
       "description": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
       "reasons": [
-        "explosive growth (1032 stars/day)",
+        "explosive growth (994 stars/day)",
         "ecosystem angle (framework)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -131,11 +131,11 @@
     {
       "name": "deepseek-ai/dsh-superagent-prototype",
       "score": 85,
-      "stars": 22115,
-      "velocity": 2211.5,
+      "stars": 22438,
+      "velocity": 2039.8,
       "description": "Towards a More Autonomous Agent System",
       "reasons": [
-        "explosive growth (2212 stars/day)",
+        "explosive growth (2040 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -150,11 +150,11 @@
     {
       "name": "heydamir/unslop",
       "score": 85,
-      "stars": 13451,
-      "velocity": 1120.9,
+      "stars": 14355,
+      "velocity": 1104.2,
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
       "reasons": [
-        "explosive growth (1121 stars/day)",
+        "explosive growth (1104 stars/day)",
         "ecosystem angle (skill, claude)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -169,11 +169,11 @@
     {
       "name": "zhuyansen/new-term-radar",
       "score": 85,
-      "stars": 2149,
-      "velocity": 74.1,
+      "stars": 2162,
+      "velocity": 72.1,
       "description": "Daily radar for new AI terms: names of new models, products and repos, caught on X, Hugging Face, GitHub and sitemaps before keyword tools list them.",
       "reasons": [
-        "very fast growth (74 stars/day)",
+        "very fast growth (72 stars/day)",
         "rich ecosystem angle (agent, skill, mcp, claude)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -187,11 +187,11 @@
     {
       "name": "Gathin23/cleanyourtv",
       "score": 75,
-      "stars": 55845,
-      "velocity": 2326.9,
+      "stars": 56335,
+      "velocity": 2253.4,
       "description": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
       "reasons": [
-        "explosive growth (2327 stars/day)",
+        "explosive growth (2253 stars/day)",
         "ecosystem angle (claude)",
         "very new (early-mover window)"
       ],
@@ -204,11 +204,11 @@
     {
       "name": "amosblomqvist/learnharness",
       "score": 75,
-      "stars": 8142,
-      "velocity": 339.2,
+      "stars": 8599,
+      "velocity": 344.0,
       "description": "Agent harness for learning difficult things.",
       "reasons": [
-        "explosive growth (339 stars/day)",
+        "explosive growth (344 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)"
       ],
