@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "items": [
     {
       "name": "ccch1mneyyy/dsh-Go",
       "score": 100,
-      "stars": 22456,
-      "velocity": 1122.8,
+      "stars": 23538,
+      "velocity": 1120.9,
       "description": "dsh-go \u2014 DeepSeek Harness \u88c5\u8fdb\u53e3\u888b\uff1a\u624b\u673a\u672c\u673a\u8fd0\u884c\uff0c\u4e5f\u80fd\u9065\u63a7\u4f60\u7684\u7535\u8111\u3002",
       "reasons": [
-        "explosive growth (1123 stars/day)",
+        "explosive growth (1121 stars/day)",
         "rich ecosystem angle (agent, llm, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -22,11 +22,11 @@
     {
       "name": "rehan-remade/universal-modder",
       "score": 100,
-      "stars": 9681,
-      "velocity": 215.1,
+      "stars": 9710,
+      "velocity": 211.1,
       "description": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
       "reasons": [
-        "explosive growth (215 stars/day)",
+        "explosive growth (211 stars/day)",
         "rich ecosystem angle (skill, mcp, claude, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -39,13 +39,30 @@
       "found_via": "Agent/MCP ecosystem"
     },
     {
+      "name": "JuneYaooo/rea-video",
+      "score": 90,
+      "stars": 8971,
+      "velocity": 560.7,
+      "description": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. \u9006\u5411\u4e00\u5207\u89c6\u9891\uff0c\u9010\u4e2a\u955c\u5934\u770b\u662f\u62cd\u7684\u3001AI \u751f\u6210\u7684\u8fd8\u662f\u4ee3\u7801\u505a\u7684\uff0c\u518d\u544a\u8bc9\u4f60\u600e\u4e48\u590d\u523b\uff1b\u62c6\u89e3\u7ed3\u679c\u6309 VIDEO.md \u683c\u5f0f\u8f93\u51fa\u3002",
+      "reasons": [
+        "explosive growth (561 stars/day)",
+        "rich ecosystem angle (agent, skill, claude)",
+        "very new (early-mover window)"
+      ],
+      "ideas": [
+        "Create a paid course/guide or complementary tool"
+      ],
+      "url": "https://github.com/JuneYaooo/rea-video",
+      "found_via": "New repos, last 30 days"
+    },
+    {
       "name": "wangzan101/Mika",
       "score": 90,
-      "stars": 8581,
-      "velocity": 536.3,
+      "stars": 8686,
+      "velocity": 510.9,
       "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
       "reasons": [
-        "explosive growth (536 stars/day)",
+        "explosive growth (511 stars/day)",
         "rich ecosystem angle (agent, automation, llm)",
         "very new (early-mover window)"
       ],
@@ -59,11 +76,11 @@
     {
       "name": "yetone/magpie",
       "score": 90,
-      "stars": 36434,
-      "velocity": 714.4,
+      "stars": 36836,
+      "velocity": 708.4,
       "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "reasons": [
-        "explosive growth (714 stars/day)",
+        "explosive growth (708 stars/day)",
         "rich ecosystem angle (agent, claude, llm)",
         "very new (early-mover window)"
       ],
@@ -77,11 +94,11 @@
     {
       "name": "Jakeschincariol/replica-skill",
       "score": 90,
-      "stars": 9309,
-      "velocity": 221.6,
+      "stars": 9410,
+      "velocity": 218.8,
       "description": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
       "reasons": [
-        "explosive growth (222 stars/day)",
+        "explosive growth (219 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "very new (early-mover window)"
       ],
@@ -93,31 +110,13 @@
       "found_via": "Agent/MCP ecosystem"
     },
     {
-      "name": "deepseek-ai/DeepInfer",
-      "score": 85,
-      "stars": 26006,
-      "velocity": 896.8,
-      "description": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
-      "reasons": [
-        "explosive growth (897 stars/day)",
-        "ecosystem angle (framework)",
-        "very new (early-mover window)",
-        "no official site yet (gap for guides/tools)"
-      ],
-      "ideas": [
-        "Create a paid course/guide or complementary tool"
-      ],
-      "url": "https://github.com/deepseek-ai/DeepInfer",
-      "found_via": "New repos, last 30 days"
-    },
-    {
       "name": "deepseek-ai/dsh-superagent-prototype",
       "score": 85,
-      "stars": 23106,
-      "velocity": 1650.4,
+      "stars": 23240,
+      "velocity": 1549.3,
       "description": "Towards a More Autonomous Agent System",
       "reasons": [
-        "explosive growth (1650 stars/day)",
+        "explosive growth (1549 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -132,11 +131,11 @@
     {
       "name": "heydamir/unslop",
       "score": 85,
-      "stars": 15878,
-      "velocity": 1058.5,
+      "stars": 16467,
+      "velocity": 1029.2,
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
       "reasons": [
-        "explosive growth (1059 stars/day)",
+        "explosive growth (1029 stars/day)",
         "ecosystem angle (skill, claude)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -151,11 +150,11 @@
     {
       "name": "janestreet/agent_skills",
       "score": 85,
-      "stars": 8454,
-      "velocity": 845.4,
+      "stars": 8828,
+      "velocity": 802.5,
       "description": "Agent skills",
       "reasons": [
-        "explosive growth (845 stars/day)",
+        "explosive growth (803 stars/day)",
         "ecosystem angle (agent, skill)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -170,11 +169,11 @@
     {
       "name": "google/elephant-goldfish-model",
       "score": 80,
-      "stars": 18902,
-      "velocity": 309.9,
+      "stars": 19507,
+      "velocity": 314.6,
       "description": "Open-source plugin for designing and reviewing software with agents",
       "reasons": [
-        "explosive growth (310 stars/day)",
+        "explosive growth (315 stars/day)",
         "rich ecosystem angle (agent, skill, claude, llm)"
       ],
       "ideas": [
@@ -187,11 +186,11 @@
     {
       "name": "Gathin23/cleanyourtv",
       "score": 75,
-      "stars": 57700,
-      "velocity": 2060.7,
+      "stars": 58137,
+      "velocity": 2004.7,
       "description": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
       "reasons": [
-        "explosive growth (2061 stars/day)",
+        "explosive growth (2005 stars/day)",
         "ecosystem angle (claude)",
         "very new (early-mover window)"
       ],
@@ -202,22 +201,21 @@
       "found_via": "New repos, last 30 days"
     },
     {
-      "name": "amosblomqvist/learnharness",
+      "name": "KKKKhazix/AIHOT",
       "score": 75,
-      "stars": 9356,
-      "velocity": 334.1,
-      "description": "Agent harness for learning difficult things.",
+      "stars": 10725,
+      "velocity": 228.2,
+      "description": "\u4e00\u4e2a\u81ea\u5df1\u627e\u70ed\u70b9\u3001\u81ea\u5df1\u5199\u65e5\u62a5\u7684\u7f51\u7ad9\u6846\u67b6\u3002\u628a\u4fe1\u6e90\u548c\u7cbe\u9009\u6807\u51c6\u6362\u6210\u4f60\u7684\uff0c\u5b83\u5c31\u662f\u4f60\u7684\u884c\u4e1a\u70ed\u70b9\u7ad9\u3002",
       "reasons": [
-        "explosive growth (334 stars/day)",
-        "ecosystem angle (agent)",
+        "explosive growth (228 stars/day)",
+        "ecosystem angle (mcp, llm)",
         "very new (early-mover window)"
       ],
       "ideas": [
-        "Sell config/skill packs or setup guides on Gumroad",
-        "Offer paid setup/integration service on Fiverr/Upwork"
+        "Create a paid course/guide or complementary tool"
       ],
-      "url": "https://github.com/amosblomqvist/learnharness",
-      "found_via": "New repos, last 30 days"
+      "url": "https://github.com/KKKKhazix/AIHOT",
+      "found_via": "AI repos, last 90 days"
     }
   ]
 }
