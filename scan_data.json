@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "items": [
     {
       "name": "ccch1mneyyy/dsh-Go",
       "score": 100,
-      "stars": 28901,
-      "velocity": 1111.6,
+      "stars": 29465,
+      "velocity": 1091.3,
       "description": "dsh-go \u2014 DeepSeek Harness \u88c5\u8fdb\u53e3\u888b\uff1a\u624b\u673a\u672c\u673a\u8fd0\u884c\uff0c\u4e5f\u80fd\u9065\u63a7\u4f60\u7684\u7535\u8111\u3002",
       "reasons": [
-        "explosive growth (1112 stars/day)",
+        "explosive growth (1091 stars/day)",
         "rich ecosystem angle (agent, llm, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -22,11 +22,11 @@
     {
       "name": "BaaRai/ARTEX",
       "score": 100,
-      "stars": 13239,
-      "velocity": 315.2,
+      "stars": 14644,
+      "velocity": 340.6,
       "description": "ARTEX - AI autonomous penetration testing system (English translation; upstream: Autumn-27/ARTEX, AGPL-3.0)",
       "reasons": [
-        "explosive growth (315 stars/day)",
+        "explosive growth (341 stars/day)",
         "rich ecosystem angle (agent, mcp, automation, llm)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -40,11 +40,11 @@
     {
       "name": "JuneYaooo/rea-video",
       "score": 90,
-      "stars": 11330,
-      "velocity": 515.0,
+      "stars": 11634,
+      "velocity": 528.8,
       "description": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. \u9006\u5411\u4e00\u5207\u89c6\u9891\uff0c\u9010\u4e2a\u955c\u5934\u770b\u662f\u62cd\u7684\u3001AI \u751f\u6210\u7684\u8fd8\u662f\u4ee3\u7801\u505a\u7684\uff0c\u518d\u544a\u8bc9\u4f60\u600e\u4e48\u590d\u523b\uff1b\u62c6\u89e3\u7ed3\u679c\u6309 VIDEO.md \u683c\u5f0f\u8f93\u51fa\u3002",
       "reasons": [
-        "explosive growth (515 stars/day)",
+        "explosive growth (529 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "very new (early-mover window)"
       ],
@@ -57,11 +57,11 @@
     {
       "name": "wangzan101/Mika",
       "score": 90,
-      "stars": 9287,
-      "velocity": 422.1,
+      "stars": 9377,
+      "velocity": 407.7,
       "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
       "reasons": [
-        "explosive growth (422 stars/day)",
+        "explosive growth (408 stars/day)",
         "rich ecosystem angle (agent, automation, llm)",
         "very new (early-mover window)"
       ],
@@ -75,11 +75,11 @@
     {
       "name": "patch-gg/pixelfx",
       "score": 90,
-      "stars": 8479,
-      "velocity": 403.8,
+      "stars": 8590,
+      "velocity": 390.5,
       "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
       "reasons": [
-        "explosive growth (404 stars/day)",
+        "explosive growth (390 stars/day)",
         "rich ecosystem angle (agent, skill, claude, plugin)",
         "very new (early-mover window)"
       ],
@@ -93,11 +93,11 @@
     {
       "name": "yetone/magpie",
       "score": 90,
-      "stars": 39486,
-      "velocity": 680.8,
+      "stars": 39736,
+      "velocity": 685.1,
       "description": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
       "reasons": [
-        "explosive growth (681 stars/day)",
+        "explosive growth (685 stars/day)",
         "rich ecosystem angle (agent, claude, llm)",
         "very new (early-mover window)"
       ],
@@ -111,11 +111,11 @@
     {
       "name": "Jakeschincariol/replica-skill",
       "score": 90,
-      "stars": 10108,
-      "velocity": 210.6,
+      "stars": 10212,
+      "velocity": 208.4,
       "description": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
       "reasons": [
-        "explosive growth (211 stars/day)",
+        "explosive growth (208 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "very new (early-mover window)"
       ],
@@ -129,11 +129,11 @@
     {
       "name": "rehan-remade/universal-modder",
       "score": 90,
-      "stars": 9807,
-      "velocity": 192.3,
+      "stars": 9824,
+      "velocity": 188.9,
       "description": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
       "reasons": [
-        "very fast growth (192 stars/day)",
+        "very fast growth (189 stars/day)",
         "rich ecosystem angle (skill, mcp, claude, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -148,11 +148,11 @@
     {
       "name": "deepseek-ai/dsh-superagent-prototype",
       "score": 85,
-      "stars": 24066,
-      "velocity": 1203.3,
+      "stars": 24145,
+      "velocity": 1149.8,
       "description": "Towards a More Autonomous Agent System",
       "reasons": [
-        "explosive growth (1203 stars/day)",
+        "explosive growth (1150 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -167,11 +167,11 @@
     {
       "name": "heydamir/unslop",
       "score": 85,
-      "stars": 19104,
-      "velocity": 868.4,
+      "stars": 19612,
+      "velocity": 852.7,
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
       "reasons": [
-        "explosive growth (868 stars/day)",
+        "explosive growth (853 stars/day)",
         "ecosystem angle (skill, claude)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -186,11 +186,11 @@
     {
       "name": "janestreet/agent_skills",
       "score": 85,
-      "stars": 10397,
-      "velocity": 649.8,
+      "stars": 10517,
+      "velocity": 618.6,
       "description": "Agent skills",
       "reasons": [
-        "explosive growth (650 stars/day)",
+        "explosive growth (619 stars/day)",
         "ecosystem angle (agent, skill)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -205,11 +205,11 @@
     {
       "name": "rddmwmddr/android-ad-cleaner",
       "score": 85,
-      "stars": 8518,
-      "velocity": 315.5,
+      "stars": 8619,
+      "velocity": 307.8,
       "description": "\u5173\u6389\u56fd\u4ea7\u5b89\u5353\u624b\u673a\u7cfb\u7edf\u91cc\u7684\u5e7f\u544a\u3001\u70ed\u641c\u3001\u8d44\u8baf\u63a8\u8350\u548c\u8425\u9500\u63a8\u9001\u3002\u4e0d root\uff0c\u53ef\u8fd8\u539f\uff0c\u652f\u6301 AI \u667a\u80fd\u4f53\u4e00\u952e\u6267\u884c\u3002",
       "reasons": [
-        "explosive growth (315 stars/day)",
+        "explosive growth (308 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
