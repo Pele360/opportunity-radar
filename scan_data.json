@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "items": [
     {
       "name": "BaaRai/ARTEX",
       "score": 100,
-      "stars": 18963,
-      "velocity": 412.2,
-      "description": "ARTEX - AI autonomous penetration testing system (English translation; upstream: Autumn-27/ARTEX, AGPL-3.0)",
+      "stars": 20414,
+      "velocity": 434.3,
+      "description": "Actively maintained ARTEX: AI autonomous penetration testing system. Self-hosted, model-agnostic, evidence-backed findings. Community continuation of Autumn-27/ARTEX, AGPL-3.0.",
       "reasons": [
-        "explosive growth (412 stars/day)",
+        "explosive growth (434 stars/day)",
         "rich ecosystem angle (agent, mcp, automation, llm)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -22,11 +22,11 @@
     {
       "name": "JuneYaooo/rea-video",
       "score": 90,
-      "stars": 12968,
-      "velocity": 498.8,
+      "stars": 13329,
+      "velocity": 493.7,
       "description": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. \u9006\u5411\u4e00\u5207\u89c6\u9891\uff0c\u9010\u4e2a\u955c\u5934\u770b\u662f\u62cd\u7684\u3001AI \u751f\u6210\u7684\u8fd8\u662f\u4ee3\u7801\u505a\u7684\uff0c\u518d\u544a\u8bc9\u4f60\u600e\u4e48\u590d\u523b\uff1b\u62c6\u89e3\u7ed3\u679c\u6309 VIDEO.md \u683c\u5f0f\u8f93\u51fa\u3002",
       "reasons": [
-        "explosive growth (499 stars/day)",
+        "explosive growth (494 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "very new (early-mover window)"
       ],
@@ -39,11 +39,11 @@
     {
       "name": "wangzan101/Mika",
       "score": 90,
-      "stars": 9859,
-      "velocity": 379.2,
+      "stars": 9979,
+      "velocity": 369.6,
       "description": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
       "reasons": [
-        "explosive growth (379 stars/day)",
+        "explosive growth (370 stars/day)",
         "rich ecosystem angle (agent, automation, llm)",
         "very new (early-mover window)"
       ],
@@ -57,11 +57,11 @@
     {
       "name": "erkamyaman/rust-anything",
       "score": 90,
-      "stars": 9154,
-      "velocity": 1144.2,
+      "stars": 9529,
+      "velocity": 1058.8,
       "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
       "reasons": [
-        "explosive growth (1144 stars/day)",
+        "explosive growth (1059 stars/day)",
         "rich ecosystem angle (agent, skill, mcp, claude)",
         "very new (early-mover window)"
       ],
@@ -74,11 +74,11 @@
     {
       "name": "patch-gg/pixelfx",
       "score": 90,
-      "stars": 9029,
-      "velocity": 361.2,
+      "stars": 9234,
+      "velocity": 355.2,
       "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own.",
       "reasons": [
-        "explosive growth (361 stars/day)",
+        "explosive growth (355 stars/day)",
         "rich ecosystem angle (agent, skill, claude, plugin)",
         "very new (early-mover window)"
       ],
@@ -92,11 +92,11 @@
     {
       "name": "Jakeschincariol/replica-skill",
       "score": 90,
-      "stars": 10530,
-      "velocity": 202.5,
+      "stars": 10646,
+      "velocity": 200.9,
       "description": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
       "reasons": [
-        "explosive growth (202 stars/day)",
+        "explosive growth (201 stars/day)",
         "rich ecosystem angle (agent, skill, claude)",
         "very new (early-mover window)"
       ],
@@ -110,11 +110,11 @@
     {
       "name": "rehan-remade/universal-modder",
       "score": 90,
-      "stars": 9868,
-      "velocity": 179.4,
+      "stars": 9877,
+      "velocity": 176.4,
       "description": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
       "reasons": [
-        "very fast growth (179 stars/day)",
+        "very fast growth (176 stars/day)",
         "rich ecosystem angle (skill, mcp, claude, plugin)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -129,11 +129,11 @@
     {
       "name": "deepseek-ai/dsh-superagent-prototype",
       "score": 85,
-      "stars": 24466,
-      "velocity": 1019.4,
+      "stars": 24571,
+      "velocity": 982.8,
       "description": "Towards a More Autonomous Agent System",
       "reasons": [
-        "explosive growth (1019 stars/day)",
+        "explosive growth (983 stars/day)",
         "ecosystem angle (agent)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -148,11 +148,11 @@
     {
       "name": "heydamir/unslop",
       "score": 85,
-      "stars": 21228,
-      "velocity": 816.5,
+      "stars": 21648,
+      "velocity": 801.8,
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
       "reasons": [
-        "explosive growth (816 stars/day)",
+        "explosive growth (802 stars/day)",
         "ecosystem angle (skill, claude)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -167,11 +167,11 @@
     {
       "name": "janestreet/agent_skills",
       "score": 85,
-      "stars": 11577,
-      "velocity": 551.3,
+      "stars": 11798,
+      "velocity": 536.3,
       "description": "Agent skills",
       "reasons": [
-        "explosive growth (551 stars/day)",
+        "explosive growth (536 stars/day)",
         "ecosystem angle (agent, skill)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
@@ -186,11 +186,11 @@
     {
       "name": "XinaTian/MROffice",
       "score": 85,
-      "stars": 3731,
-      "velocity": 266.5,
+      "stars": 4540,
+      "velocity": 302.7,
       "description": "MR Office \u2014 the open-source editors of the AI office suite closest to Microsoft Office: documents, spreadsheets, presentations, PDF and code in the browser. Copilot in every editor edits real Word, Ex",
       "reasons": [
-        "explosive growth (266 stars/day)",
+        "explosive growth (303 stars/day)",
         "rich ecosystem angle (agent, mcp, claude)",
         "very new (early-mover window)"
       ],
@@ -204,11 +204,11 @@
     {
       "name": "Jakeschincariol/day-trader-skill",
       "score": 85,
-      "stars": 9453,
-      "velocity": 270.1,
+      "stars": 9596,
+      "velocity": 266.6,
       "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
       "reasons": [
-        "explosive growth (270 stars/day)",
+        "explosive growth (267 stars/day)",
         "ecosystem angle (skill, claude)",
         "very new (early-mover window)",
         "no official site yet (gap for guides/tools)"
